@@ -1,0 +1,59 @@
+{
+  "title": "DEFRO eModuł — odczyt",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Połącz eModuł",
+        "description": "Zaloguj się do konta, na którym widzisz swój DEFRO APC Slim. Hasło służy tylko do utworzenia sesji i nie jest zapisywane przez integrację.",
+        "data": {
+          "site": "Domena konta",
+          "username": "Login lub e-mail",
+          "password": "Hasło"
+        }
+      },
+      "module": {
+        "title": "Wybierz sterownik DEFRO",
+        "description": "Powstanie 317 encji odczytu dla ST-9730. Kody menu są opcjonalne. Wpisz znane Ci kody, jeśli używasz ich w eModuł; bez kodu chronione pozycje będą niedostępne.",
+        "data": {
+          "module_udid": "Sterownik",
+          "user_code": "Kod menu użytkownika MU",
+          "installer_code": "Kod menu instalatora MI",
+          "service_code": "Kod menu serwisowego MS"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Zaloguj ponownie eModuł",
+        "description": "Sesja wygasła. Zaloguj się do konta z dostępem do tego samego sterownika. Istniejące encje i historia zostaną zachowane.",
+        "data": {
+          "username": "Login lub e-mail",
+          "password": "Hasło"
+        }
+      },
+      "reconfigure": {
+        "title": "Dostęp do menu",
+        "description": "Wpisz znane kody menu. Puste pole usuwa zapisany kod. Zmiana dotyczy dostępu do odczytu i nie zmienia nastaw kotła.",
+        "data": {
+          "user_code": "Kod menu użytkownika MU",
+          "installer_code": "Kod menu instalatora MI",
+          "service_code": "Kod menu serwisowego MS"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Nieprawidłowe dane logowania albo sesja wygasła.",
+      "cannot_connect": "Nie udało się odczytać eModułu. Sprawdź połączenie i spróbuj ponownie.",
+      "rate_limit": "eModuł ograniczył liczbę zapytań. Spróbuj ponownie później.",
+      "module_missing": "Wybrany sterownik nie jest dostępny na tym koncie.",
+      "wrong_account": "To konto nie ma dostępu do skonfigurowanego sterownika.",
+      "unsupported_model": "Ten katalog encji przygotowano dla DEFRO ST-9730.",
+      "invalid_code_format": "Wpisz od 1 do 16 cyfr albo pozostaw puste pole.",
+      "invalid_code": "Sterownik nie przyjął podanego kodu menu."
+    },
+    "abort": {
+      "already_configured": "Ten sterownik został już dodany.",
+      "no_supported_module": "Nie znaleziono sterownika pelletowego DEFRO obsługiwanego przez tę integrację.",
+      "session_missing": "Rozpocznij konfigurację ponownie.",
+      "unique_id_mismatch": "Wybrany sterownik nie zgadza się z istniejącą konfiguracją."
+    }
+  }
+}

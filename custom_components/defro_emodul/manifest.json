@@ -1,0 +1,14 @@
+{
+  "domain": "defro_emodul",
+  "name": "DEFRO eModuł — odczyt",
+  "version": "1.0.0",
+  "documentation": "https://github.com/Grzegorz484/Tech-controllers-defro",
+  "codeowners": [
+    "@Grzegorz484"
+  ],
+  "config_flow": true,
+  "integration_type": "hub",
+  "iot_class": "cloud_polling",
+  "requirements": [],
+  "issue_tracker": "https://github.com/Grzegorz484/Tech-controllers-defro/issues"
+}

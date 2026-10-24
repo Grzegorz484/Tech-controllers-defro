@@ -1,0 +1,5518 @@
+{
+  "synthetic": true,
+  "metadata": {
+    "type": "pellet",
+    "company": "defro",
+    "version": "ST-9730 synthetic test fixture",
+    "controllerStatus": "active",
+    "moduleStatus": "active"
+  },
+  "online": true,
+  "texts": {
+    "473": "Ogrzewanie domu",
+    "814": "Tryb pracy",
+    "523": "PID włączony",
+    "1127": "Z bufora",
+    "1039": "Stan sterownika",
+    "575": "Pompa cyrkulacyjna",
+    "345": "Lambda 1%",
+    "326": "Kierunek otwierania",
+    "210": "Czujnik pogodowy",
+    "856": "Ustawienia zaworów",
+    "1117": "Regulator SPK LUX",
+    "2960": "Cykl",
+    "605": "Praca podtrzymania",
+    "3236": "Wyjście dodatkowe 1",
+    "291": "Hallotron nadmuchu",
+    "934": "Zabezpieczenie wygaszania",
+    "692": "Skok jednostkowy",
+    "239": "Czyszczenie",
+    "3455": "Rodzaj pomiaru",
+    "967": "Zasobnik pełny",
+    "830": "Typ zaworu",
+    "862": "W lewo",
+    "899": "Wybór czujnika",
+    "764": "Temp. zał. pompy CO",
+    "135": "Czas dezynfekcji",
+    "161": "Czas przerwy",
+    "791": "Temperatura spalin",
+    "900": "Wybór czujnika 1",
+    "510": "Parametry pracy",
+    "565": "Pogodówka",
+    "582": "Pompa podłogowa",
+    "434": "Nadmuch 1",
+    "902": "Wybór czujnika CO",
+    "741": "Temp. dezynfekcji",
+    "739": "Temp. alarmu podajnika",
+    "989": "Zawór podłogowy",
+    "912": "Wygaszanie",
+    "1427": "Maksymalna zadana CWU",
+    "1272": "Czujnik rusztu",
+    "1042": "Grzałka",
+    "838": "Czy przywrócić ustawienia fabryczne?",
+    "696": "Skok wentylatora",
+    "76": "Bieg",
+    "409": "Minimalna praca podajnika",
+    "635": "Przerwa podtrzymania",
+    "951": "Załączona powyżej progu",
+    "704": "Sonda Lambda",
+    "676": "Ruszt",
+    "759": "Temp. zadana zaworu",
+    "1626": "Dolna granica wydajności",
+    "3": "12 kW",
+    "609": "Procent",
+    "907": "Wybór PID",
+    "3819": "Zabezpieczenie Hallotronu",
+    "403": "Min. wentylator roboczy 1",
+    "1629": "Temp. załączenia 3 kotłów",
+    "2980": "Czujnik",
+    "662": "Rodzaj pompy",
+    "213": "Czujnik powrotu",
+    "384": "Maks. wentylator roboczy 1",
+    "823": "Tygodniówka kotła",
+    "610": "Próg",
+    "1621": "Korekta wentylatora górna",
+    "222": "Czujnik zaworu 2",
+    "512": "Parametry wygaszania",
+    "298": "Ilość cykli",
+    "820": "Tryby pracy",
+    "131": "Czas aktualizacji",
+    "457": "Obroty/min.",
+    "515": "Piątek",
+    "1705": "Przedmuchy w pracy",
+    "761": "Temperatura zadana dolna",
+    "1125": "Grzanie podłogowe",
+    "648": "Regulator TECH",
+    "695": "Skok tlenu",
+    "49": "75 kW",
+    "765": "Temp. zał. pompy CWU",
+    "892": "Współczynniki",
+    "901": "Wybór czujnika 2",
+    "1895": "Min. obroty 1",
+    "294": "Histereza",
+    "1627": "Temp. załączenia 1 kotła",
+    "248": "Dezynfekcja dostępna tylko w trybie CWU",
+    "3752": "Pompa przewałowa",
+    "968": "Zasobnik pusty",
+    "77": "Bieg nadmuchu wygaszania",
+    "3454": "Średnia",
+    "947": "Załącz",
+    "513": "Paskali",
+    "232": "Czujniki z głównego sterownika",
+    "550": "Podajnik",
+    "459": "Obroty wentylatora",
+    "1047": "Czujnik podajnika",
+    "893": "Wtorek",
+    "1050": "Temperatura CO",
+    "426": "Moduł GSM",
+    "428": "Modulacja",
+    "636": "Przerwa pomiaru",
+    "2953": "Czas pomiaru",
+    "748": "Temp. priorytetu",
+    "373": "Maksymalna przerwa podajnika",
+    "883": "Współcz. propor.",
+    "938": "Temp. zadana CWU",
+    "389": "Menu instalatora",
+    "464": "Ochrona kotła",
+    "147": "Czas podawania",
+    "3175": "Temp. ponownego załączenia",
+    "12": "16 kW",
+    "16": "20 kW",
+    "795": "Temperatura zewnętrzna",
+    "589": "Poniedziałek",
+    "344": "Lambda",
+    "922": "Wyłączona",
+    "1628": "Temp. załączenia 2 kotłów",
+    "574": "Pompa CWU lato",
+    "873": "Wersja modułu",
+    "4714": "Komunikacja z reg. pokojowym RS",
+    "1082": "Wentylator w podtrzymaniu",
+    "702": "Sobota",
+    "1266": "Minimalne podciśnienie",
+    "964": "Zasobnik napełniony",
+    "2432": "Wzrost obrotów wentylatora",
+    "563": "Podtrzymanie",
+    "988": "Zawór 1",
+    "1268": "Kontrola paliwa",
+    "573": "Pompa CWU",
+    "2993": "Górny próg obrotów",
+    "707": "Środa",
+    "296": "Histereza CWU",
+    "7": "15 kW",
+    "641": "Regulator podciśnienia",
+    "671": "Rozpalanie",
+    "221": "Czujnik zaworu 1",
+    "1258": "Zał/Wył",
+    "460": "Obroty wentylatora 1",
+    "4122": "Praca z wydajności podajnika",
+    "381": "Maks. temp. podłogi",
+    "68": "Alarmowe załączenie pompy CO",
+    "780": "Temperatura min.",
+    "634": "Przerwa podawania",
+    "476": "Okres czyszczenia",
+    "406": "Min. wentylator",
+    "396": "Min. obroty",
+    "585": "Pompa zaworu",
+    "21": "22 kW",
+    "2997": "Tolerancja obrotów",
+    "318": "Czy zakończyć kalibracje?",
+    "4643": "Faza 1",
+    "1437": "Próg wentylatora",
+    "234": "Czwartek",
+    "839": "Ustawienia fabryczne",
+    "305": "Impulsy wzrostu",
+    "419": "Moc kotła",
+    "455": "Obniżenie pokojówki",
+    "312": "Kalibracja",
+    "669": "Różnica temp. pomieszczenia",
+    "953": "Załączony",
+    "1118": "Korekcja temperatury zewnętrznej",
+    "992": "Zawór wbudowany 1",
+    "995": "Zawsze załączona",
+    "3740": "Ważenie",
+    "1126": "Funkcja CWU",
+    "994": "Zawsze wyłączona",
+    "903": "Wybór czujników",
+    "387": "Maks. zmiana",
+    "4785": "Kontrola obrotów",
+    "42": "50 kW",
+    "346": "Lambda 100%",
+    "1035": "°C",
+    "246": "Dezynfekcja",
+    "3209": "Czujnik bufora",
+    "192": "Czujnik CO",
+    "4645": "Faza 2",
+    "732": "Suma",
+    "378": "Maks. czas dogrzania dezynfekcji",
+    "362": "Maks. obroty",
+    "604": "Praca PID",
+    "397": "Minimalne otwarcie",
+    "932": "Zabezpieczenie rozpalania",
+    "2999": "Ruszt przed rozpal.",
+    "740": "Temperatura antyzamarzania",
+    "644": "Regulator standard",
+    "719": "Sterowanie tygodniowe",
+    "365": "Maks. temp. spalin",
+    "194": "Czujnik CWU",
+    "511": "Parametry rozpalania",
+    "4787": "Kontrola obrotów - rozpalanie",
+    "465": "Ochrona powrotu",
+    "715": "Sterowanie bez pokojówki",
+    "1274": "Ruszt w pracy",
+    "284": "Godzina załączenia",
+    "316": "Kalibracja poziomu paliwa",
+    "3537": "Czas kontroli płomienia",
+    "280": "Funkcja przepływu",
+    "760": "Temperatura zadana",
+    "1119": "Czas uśredniania",
+    "441": "Nastawy temperatur",
+    "763": "Temperatura załączenia pomp",
+    "388": "Menu",
+    "241": "Czyszczenie kotła",
+    "504": "Parametry bufora",
+    "317": "Czy rozpocząć kalibracje?",
+    "143": "Czas otwarcia",
+    "319": "Czy uruchomić kalibracje?",
+    "845": "Ustawienia",
+    "789": "Temperatura pokoju bieżąca",
+    "440": "Nastawy pracy",
+    "2992": "Dolny próg obrotów",
+    "1195": "Czas alarmu",
+    "4019": "Min. moc kotła",
+    "972": "Czy wygasić kocioł?",
+    "156": "Czas pracy",
+    "1128": "Z kotła",
+    "1079": "Próg temperatury",
+    "1040": "Temperatura powrotu",
+    "1978": "Kaloryczność paliwa",
+    "3210": "Regulator SPK LUX standard",
+    "685": "Sekund",
+    "822": "Tygodniówka CWU",
+    "1044": "%",
+    "29": "30 kW",
+    "1162": "Temperatura aktualna",
+    "342": "Krzywa grzewcza",
+    "1034": "°",
+    "850": "Ustawienia kotła",
+    "831": "Zawór CO",
+    "863": "W prawo",
+    "371": "Maksymalna praca podajnika",
+    "197": "Czujnik dodatkowy 2",
+    "811": "Tryb letni",
+    "985": "Zawór 2",
+    "486": "Opóźnienie rozp.",
+    "921": "Wyłączenie podtrzymania",
+    "336": "Kontrola pracy",
+    "971": "Czy rozpocząć rozpalanie?",
+    "525": "PID wyłączony",
+    "572": "Pokojówka pompa CO",
+    "1974": "Pompa CO lato",
+    "2210": "Godzina załączenia 2",
+    "3212": "Czas czyszczenia",
+    "587": "Pompy równoległe",
+    "34": "35 kW",
+    "767": "Temp. załączenia pompy",
+    "196": "Czujnik dodatkowy 1",
+    "3211": "Bieg czyszczenia",
+    "2996": "Min. czas zatrzymania",
+    "738": "Temp. alarmu kotła",
+    "149": "Czas podsypu",
+    "444": "Niedziela",
+    "315": "Kalibracja czujnika zewn.",
+    "368": "Maks. wentylator",
+    "22": "25 kW",
+    "1655": "Czas oczekiwania",
+    "571": "Pompa CO",
+    "391": "Menu serwis",
+    "231": "Czujniki własne",
+    "1049": "Impulsy",
+    "888": "Współcz. podajnika wewnętrznego",
+    "965": "Potwierdź napełnienie zasobnika",
+    "647": "Regulator standard zaworu",
+    "1223": "Pokojówka pompa zaworu",
+    "824": "Tygodniówka zaworu",
+    "487": "Opóźnienie rozpalania",
+    "1622": "Korekta wentylatora dolna",
+    "1625": "Kaskada",
+    "400": "Minimalna temperatura kotła",
+    "790": "Temperatura pokoju zadana",
+    "950": "Załączona",
+    "407": "Min. zmiana",
+    "1761": "Wentylator wyciągowy",
+    "1005": "Zmiana temperatury zadanej",
+    "937": "Temp. zadana CO",
+    "1635": "Pompa krótkiego obiegu",
+    "281": "Funkcja rozpalania",
+    "311": "Jasność rozpalania",
+    "411": "Minimalna przerwa podajnika",
+    "3489": "Kalibracja podajnika",
+    "3453": "Kocioł główny",
+    "2756": "Obroty wentylatora 1 opóźnienie",
+    "1906": "Dni",
+    "297": "Histereza kotła",
+    "779": "Temperatura maks.",
+    "3411": "Wydajność podajnika",
+    "1897": "Maks. obroty 1",
+    "177": "Czas wydmuchu",
+    "1702": "Termik",
+    "145": "Czas pierwszej aktualizacji",
+    "642": "Regulator pokojowy",
+    "608": "Priorytet bojlera",
+    "546": "Plan pracy",
+    "40": "40 kW",
+    "4786": "Kontrola obrotów - praca",
+    "2995": "Maks. czas rozpędzania",
+    "1310": "Ilość impulsów na obrót"
+  },
+  "sections": {
+    "tile": {
+      "status": "ok",
+      "elements": {
+        "1001": {
+          "id": 1001,
+          "type": 40,
+          "parentId": 0,
+          "visibility": true,
+          "params": {
+            "description": "Text information",
+            "headerId": 814,
+            "statusId": 473
+          }
+        },
+        "1002": {
+          "id": 1002,
+          "type": 11,
+          "parentId": 0,
+          "visibility": true,
+          "params": {
+            "description": "Relay",
+            "txtId": 550,
+            "workingStatus": false
+          }
+        },
+        "1003": {
+          "id": 1003,
+          "type": 11,
+          "parentId": 0,
+          "visibility": true,
+          "params": {
+            "description": "Relay",
+            "txtId": 1042,
+            "workingStatus": false
+          }
+        },
+        "1004": {
+          "id": 1004,
+          "type": 11,
+          "parentId": 0,
+          "visibility": true,
+          "params": {
+            "description": "Relay",
+            "txtId": 571,
+            "workingStatus": true
+          }
+        },
+        "1005": {
+          "id": 1005,
+          "type": 11,
+          "parentId": 0,
+          "visibility": true,
+          "params": {
+            "description": "Relay",
+            "txtId": 573,
+            "workingStatus": false
+          }
+        },
+        "1006": {
+          "id": 1006,
+          "type": 1,
+          "parentId": 0,
+          "visibility": true,
+          "params": {
+            "description": "Temperature sensor",
+            "txtId": 1050,
+            "value": 605,
+            "workingStatus": true
+          }
+        },
+        "1008": {
+          "id": 1008,
+          "type": 1,
+          "parentId": 0,
+          "visibility": true,
+          "params": {
+            "description": "Temperature sensor",
+            "txtId": 791,
+            "value": 1000,
+            "workingStatus": true
+          }
+        },
+        "1009": {
+          "id": 1009,
+          "type": 1,
+          "parentId": 0,
+          "visibility": true,
+          "params": {
+            "description": "Temperature sensor",
+            "txtId": 795,
+            "value": 110,
+            "workingStatus": true
+          }
+        },
+        "1010": {
+          "id": 1010,
+          "type": 31,
+          "parentId": 0,
+          "visibility": true,
+          "params": {
+            "description": "Fuel supply",
+            "percentage": 60,
+            "hours": 12
+          }
+        },
+        "1011": {
+          "id": 1011,
+          "type": 22,
+          "parentId": 0,
+          "visibility": true,
+          "params": {
+            "description": "Fan",
+            "txtId": -1,
+            "gear": 35,
+            "workingStatus": true
+          }
+        },
+        "1012": {
+          "id": 1012,
+          "type": 23,
+          "parentId": 0,
+          "visibility": true,
+          "params": {
+            "description": "Built-in valve",
+            "txtId": -1,
+            "currentTemp": 455,
+            "returnTemp": 400,
+            "setTemp": 45,
+            "openingPercentage": 25,
+            "workingStatus": true,
+            "valvePump": 1,
+            "boilerProtection": 1,
+            "returnProtection": 0,
+            "setTempCorrection": 0
+          }
+        },
+        "1016": {
+          "id": 1016,
+          "type": 2,
+          "parentId": 0,
+          "visibility": true,
+          "params": {
+            "description": "Fire sensor",
+            "workingStatus": true,
+            "value": 42
+          }
+        },
+        "1017": {
+          "id": 1017,
+          "type": 1,
+          "parentId": 0,
+          "visibility": true,
+          "params": {
+            "description": "Temperature sensor",
+            "txtId": 789,
+            "value": 205,
+            "workingStatus": true
+          }
+        },
+        "2000": {
+          "id": 2000,
+          "type": 50,
+          "parentId": 0,
+          "visibility": true,
+          "params": {
+            "description": "Controller software version",
+            "txtId": 873,
+            "version": "1.0.0",
+            "controllerName": "ST-9730 synthetic test fixture"
+          }
+        },
+        "2040": {
+          "id": 2040,
+          "type": 40,
+          "parentId": 0,
+          "visibility": true,
+          "params": {
+            "description": "Text information",
+            "headerId": 1039,
+            "statusId": 604
+          }
+        },
+        "3630": {
+          "id": 3630,
+          "type": 32,
+          "parentId": 0,
+          "visibility": true,
+          "params": {
+            "description": "Disinfection",
+            "txtId": 0,
+            "percentage": 0
+          }
+        }
+      }
+    },
+    "MU": {
+      "status": "ok",
+      "elements": {
+        "0": {
+          "id": 0,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MU",
+          "txtId": 388,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2089": {
+          "id": 2089,
+          "type": 2,
+          "parentId": 0,
+          "menuType": "MU",
+          "txtId": 790,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 2,
+            "value": 215
+          }
+        },
+        "250": {
+          "id": 250,
+          "type": 20,
+          "parentId": 0,
+          "menuType": "MU",
+          "txtId": 671,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "type": 1,
+            "value": -1
+          }
+        },
+        "251": {
+          "id": 251,
+          "type": 20,
+          "parentId": 0,
+          "menuType": "MU",
+          "txtId": 912,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "type": 1,
+            "value": -1
+          }
+        },
+        "252": {
+          "id": 252,
+          "type": 20,
+          "parentId": 0,
+          "menuType": "MU",
+          "txtId": 964,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "type": 1,
+            "value": -1
+          }
+        },
+        "30032": {
+          "id": 30032,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MU",
+          "txtId": 441,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2060": {
+          "id": 2060,
+          "type": 1,
+          "parentId": 30032,
+          "menuType": "MU",
+          "txtId": 937,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 60
+          }
+        },
+        "2062": {
+          "id": 2062,
+          "type": 1,
+          "parentId": 30032,
+          "menuType": "MU",
+          "txtId": 297,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2061": {
+          "id": 2061,
+          "type": 1,
+          "parentId": 30032,
+          "menuType": "MU",
+          "txtId": 938,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 45
+          }
+        },
+        "2063": {
+          "id": 2063,
+          "type": 1,
+          "parentId": 30032,
+          "menuType": "MU",
+          "txtId": 296,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "1982": {
+          "id": 1982,
+          "type": 1,
+          "parentId": 30032,
+          "menuType": "MU",
+          "txtId": 764,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "1983": {
+          "id": 1983,
+          "type": 1,
+          "parentId": 30032,
+          "menuType": "MU",
+          "txtId": 765,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "30039": {
+          "id": 30039,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MU",
+          "txtId": 440,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2760": {
+          "id": 2760,
+          "type": 1,
+          "parentId": 30039,
+          "menuType": "MU",
+          "txtId": 147,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2761": {
+          "id": 2761,
+          "type": 1,
+          "parentId": 30039,
+          "menuType": "MU",
+          "txtId": 634,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2762": {
+          "id": 2762,
+          "type": 1,
+          "parentId": 30039,
+          "menuType": "MU",
+          "txtId": 459,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2763": {
+          "id": 2763,
+          "type": 1,
+          "parentId": 30039,
+          "menuType": "MU",
+          "txtId": 605,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2764": {
+          "id": 2764,
+          "type": 3,
+          "parentId": 30039,
+          "menuType": "MU",
+          "txtId": 635,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "2765": {
+          "id": 2765,
+          "type": 1,
+          "parentId": 30039,
+          "menuType": "MU",
+          "txtId": 1082,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "30046": {
+          "id": 30046,
+          "type": 10,
+          "parentId": 0,
+          "menuType": "MU",
+          "txtId": 0,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "255": {
+          "id": 255,
+          "type": 20,
+          "parentId": 0,
+          "menuType": "MU",
+          "txtId": 246,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "type": 1,
+            "value": -1
+          }
+        },
+        "30048": {
+          "id": 30048,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MU",
+          "txtId": 719,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "30049": {
+          "id": 30049,
+          "type": 0,
+          "parentId": 30048,
+          "menuType": "MU",
+          "txtId": 546,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "3350": {
+          "id": 3350,
+          "type": 10,
+          "parentId": 30049,
+          "menuType": "MU",
+          "txtId": 953,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "30051": {
+          "id": 30051,
+          "type": 0,
+          "parentId": 30049,
+          "menuType": "MU",
+          "txtId": 546,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "3352": {
+          "id": 3352,
+          "type": 13,
+          "parentId": 30051,
+          "menuType": "MU",
+          "txtId": 0,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 6,
+            "value": 0,
+            "noZones": 48
+          }
+        },
+        "3353": {
+          "id": 3353,
+          "type": 13,
+          "parentId": 30051,
+          "menuType": "MU",
+          "txtId": 0,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 0,
+            "value": 0,
+            "noZones": 48
+          }
+        },
+        "3354": {
+          "id": 3354,
+          "type": 13,
+          "parentId": 30051,
+          "menuType": "MU",
+          "txtId": 0,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 1,
+            "value": 0,
+            "noZones": 48
+          }
+        },
+        "3355": {
+          "id": 3355,
+          "type": 13,
+          "parentId": 30051,
+          "menuType": "MU",
+          "txtId": 0,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 2,
+            "value": 0,
+            "noZones": 48
+          }
+        },
+        "3356": {
+          "id": 3356,
+          "type": 13,
+          "parentId": 30051,
+          "menuType": "MU",
+          "txtId": 0,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 3,
+            "value": 0,
+            "noZones": 48
+          }
+        },
+        "3357": {
+          "id": 3357,
+          "type": 13,
+          "parentId": 30051,
+          "menuType": "MU",
+          "txtId": 0,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 4,
+            "value": 0,
+            "noZones": 48
+          }
+        },
+        "3351": {
+          "id": 3351,
+          "type": 13,
+          "parentId": 30051,
+          "menuType": "MU",
+          "txtId": 0,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 5,
+            "value": 0,
+            "noZones": 48
+          }
+        },
+        "30059": {
+          "id": 30059,
+          "type": 0,
+          "parentId": 30048,
+          "menuType": "MU",
+          "txtId": 823,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "3000": {
+          "id": 3000,
+          "type": 10,
+          "parentId": 30059,
+          "menuType": "MU",
+          "txtId": 953,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "30061": {
+          "id": 30061,
+          "type": 0,
+          "parentId": 30059,
+          "menuType": "MU",
+          "txtId": 845,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "3001": {
+          "id": 3001,
+          "type": 12,
+          "parentId": 30061,
+          "menuType": "MU",
+          "txtId": 823,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 5,
+            "values": []
+          }
+        },
+        "3002": {
+          "id": 3002,
+          "type": 12,
+          "parentId": 30061,
+          "menuType": "MU",
+          "txtId": 823,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 6,
+            "values": []
+          }
+        },
+        "3003": {
+          "id": 3003,
+          "type": 12,
+          "parentId": 30061,
+          "menuType": "MU",
+          "txtId": 823,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 0,
+            "values": []
+          }
+        },
+        "3004": {
+          "id": 3004,
+          "type": 12,
+          "parentId": 30061,
+          "menuType": "MU",
+          "txtId": 823,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 1,
+            "values": []
+          }
+        },
+        "3005": {
+          "id": 3005,
+          "type": 12,
+          "parentId": 30061,
+          "menuType": "MU",
+          "txtId": 823,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 2,
+            "values": []
+          }
+        },
+        "3006": {
+          "id": 3006,
+          "type": 12,
+          "parentId": 30061,
+          "menuType": "MU",
+          "txtId": 823,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 3,
+            "values": []
+          }
+        },
+        "3007": {
+          "id": 3007,
+          "type": 12,
+          "parentId": 30061,
+          "menuType": "MU",
+          "txtId": 823,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 4,
+            "values": []
+          }
+        },
+        "30072": {
+          "id": 30072,
+          "type": 0,
+          "parentId": 30048,
+          "menuType": "MU",
+          "txtId": 822,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "3200": {
+          "id": 3200,
+          "type": 10,
+          "parentId": 30072,
+          "menuType": "MU",
+          "txtId": 953,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "30074": {
+          "id": 30074,
+          "type": 0,
+          "parentId": 30072,
+          "menuType": "MU",
+          "txtId": 845,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "3201": {
+          "id": 3201,
+          "type": 12,
+          "parentId": 30074,
+          "menuType": "MU",
+          "txtId": 822,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 2,
+            "values": []
+          }
+        },
+        "3202": {
+          "id": 3202,
+          "type": 12,
+          "parentId": 30074,
+          "menuType": "MU",
+          "txtId": 822,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 3,
+            "values": []
+          }
+        },
+        "3203": {
+          "id": 3203,
+          "type": 12,
+          "parentId": 30074,
+          "menuType": "MU",
+          "txtId": 822,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 4,
+            "values": []
+          }
+        },
+        "3204": {
+          "id": 3204,
+          "type": 12,
+          "parentId": 30074,
+          "menuType": "MU",
+          "txtId": 822,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 5,
+            "values": []
+          }
+        },
+        "3205": {
+          "id": 3205,
+          "type": 12,
+          "parentId": 30074,
+          "menuType": "MU",
+          "txtId": 822,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 6,
+            "values": []
+          }
+        },
+        "3206": {
+          "id": 3206,
+          "type": 12,
+          "parentId": 30074,
+          "menuType": "MU",
+          "txtId": 822,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 0,
+            "values": []
+          }
+        },
+        "3207": {
+          "id": 3207,
+          "type": 12,
+          "parentId": 30074,
+          "menuType": "MU",
+          "txtId": 822,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 1,
+            "values": []
+          }
+        },
+        "2011": {
+          "id": 2011,
+          "type": 11,
+          "parentId": 0,
+          "menuType": "MU",
+          "txtId": 820,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 473,
+                "value": 0
+              },
+              {
+                "txtId": 608,
+                "value": 1
+              },
+              {
+                "txtId": 587,
+                "value": 2
+              },
+              {
+                "txtId": 811,
+                "value": 3
+              }
+            ],
+            "value": 0
+          }
+        },
+        "2814": {
+          "id": 2814,
+          "type": 10,
+          "parentId": 0,
+          "menuType": "MU",
+          "txtId": 1125,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "260": {
+          "id": 260,
+          "type": 20,
+          "parentId": 0,
+          "menuType": "MU",
+          "txtId": 839,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "type": 1,
+            "value": -1
+          }
+        }
+      }
+    },
+    "MI": {
+      "status": "ok",
+      "elements": {
+        "0": {
+          "id": 0,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MI",
+          "txtId": 389,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2004": {
+          "id": 2004,
+          "type": 11,
+          "parentId": 0,
+          "menuType": "MI",
+          "txtId": 907,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 525,
+                "value": 0
+              },
+              {
+                "txtId": 523,
+                "value": 1
+              }
+            ],
+            "value": 0
+          }
+        },
+        "4746": {
+          "id": 4746,
+          "type": 1,
+          "parentId": 0,
+          "menuType": "MI",
+          "txtId": 4019,
+          "access": false,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "30090": {
+          "id": 30090,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MI",
+          "txtId": 1274,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2790": {
+          "id": 2790,
+          "type": 10,
+          "parentId": 30090,
+          "menuType": "MI",
+          "txtId": 1258,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "2191": {
+          "id": 2191,
+          "type": 3,
+          "parentId": 30090,
+          "menuType": "MI",
+          "txtId": 156,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "2792": {
+          "id": 2792,
+          "type": 4,
+          "parentId": 30090,
+          "menuType": "MI",
+          "txtId": 161,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 4,
+            "value": 0
+          }
+        },
+        "2794": {
+          "id": 2794,
+          "type": 1,
+          "parentId": 30090,
+          "menuType": "MI",
+          "txtId": 2432,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "30097": {
+          "id": 30097,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MI",
+          "txtId": 1705,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "3550": {
+          "id": 3550,
+          "type": 10,
+          "parentId": 30097,
+          "menuType": "MI",
+          "txtId": 1258,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "3551": {
+          "id": 3551,
+          "type": 3,
+          "parentId": 30097,
+          "menuType": "MI",
+          "txtId": 156,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "3552": {
+          "id": 3552,
+          "type": 3,
+          "parentId": 30097,
+          "menuType": "MI",
+          "txtId": 161,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "3553": {
+          "id": 3553,
+          "type": 1,
+          "parentId": 30097,
+          "menuType": "MI",
+          "txtId": 3211,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "30102": {
+          "id": 30102,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MI",
+          "txtId": 892,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "30106": {
+          "id": 30106,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MI",
+          "txtId": 504,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "3682": {
+          "id": 3682,
+          "type": 10,
+          "parentId": 30106,
+          "menuType": "MI",
+          "txtId": 953,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "3683": {
+          "id": 3683,
+          "type": 11,
+          "parentId": 30106,
+          "menuType": "MI",
+          "txtId": 1126,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 1127,
+                "value": 0
+              },
+              {
+                "txtId": 1128,
+                "value": 1
+              }
+            ],
+            "value": 0
+          }
+        },
+        "3680": {
+          "id": 3680,
+          "type": 1,
+          "parentId": 30106,
+          "menuType": "MI",
+          "txtId": 3175,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "3681": {
+          "id": 3681,
+          "type": 1,
+          "parentId": 30106,
+          "menuType": "MI",
+          "txtId": 761,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "30112": {
+          "id": 30112,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MI",
+          "txtId": 856,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "30113": {
+          "id": 30113,
+          "type": 0,
+          "parentId": 30112,
+          "menuType": "MI",
+          "txtId": 992,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2227": {
+          "id": 2227,
+          "type": 10,
+          "parentId": 30113,
+          "menuType": "MI",
+          "txtId": 953,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "2229": {
+          "id": 2229,
+          "type": 1,
+          "parentId": 30113,
+          "menuType": "MI",
+          "txtId": 759,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2250": {
+          "id": 2250,
+          "type": 2,
+          "parentId": 30113,
+          "menuType": "MI",
+          "txtId": 294,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 2,
+            "value": 0
+          }
+        },
+        "2228": {
+          "id": 2228,
+          "type": 20,
+          "parentId": 30113,
+          "menuType": "MI",
+          "txtId": 312,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "type": 1,
+            "value": -1
+          }
+        },
+        "2202": {
+          "id": 2202,
+          "type": 1,
+          "parentId": 30113,
+          "menuType": "MI",
+          "txtId": 692,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2203": {
+          "id": 2203,
+          "type": 1,
+          "parentId": 30113,
+          "menuType": "MI",
+          "txtId": 397,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2221": {
+          "id": 2221,
+          "type": 3,
+          "parentId": 30113,
+          "menuType": "MI",
+          "txtId": 143,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "2223": {
+          "id": 2223,
+          "type": 1,
+          "parentId": 30113,
+          "menuType": "MI",
+          "txtId": 636,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2200": {
+          "id": 2200,
+          "type": 11,
+          "parentId": 30113,
+          "menuType": "MI",
+          "txtId": 830,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 831,
+                "value": 1
+              },
+              {
+                "txtId": 989,
+                "value": 2
+              }
+            ],
+            "value": 1
+          }
+        },
+        "30125": {
+          "id": 30125,
+          "type": 0,
+          "parentId": 30113,
+          "menuType": "MI",
+          "txtId": 565,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2216": {
+          "id": 2216,
+          "type": 10,
+          "parentId": 30125,
+          "menuType": "MI",
+          "txtId": 950,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "2217": {
+          "id": 2217,
+          "type": 30,
+          "parentId": 30125,
+          "menuType": "MI",
+          "txtId": 342,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "points": [
+              {
+                "position": -20,
+                "value": 60
+              },
+              {
+                "position": -10,
+                "value": 55
+              },
+              {
+                "position": 0,
+                "value": 50
+              },
+              {
+                "position": 10,
+                "value": 45
+              }
+            ]
+          }
+        },
+        "30128": {
+          "id": 30128,
+          "type": 0,
+          "parentId": 30113,
+          "menuType": "MI",
+          "txtId": 642,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2204": {
+          "id": 2204,
+          "type": 11,
+          "parentId": 30128,
+          "menuType": "MI",
+          "txtId": 642,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 715,
+                "value": 0
+              },
+              {
+                "txtId": 3210,
+                "value": 2
+              },
+              {
+                "txtId": 1117,
+                "value": 3
+              },
+              {
+                "txtId": 647,
+                "value": 1
+              }
+            ],
+            "value": 0
+          }
+        },
+        "2208": {
+          "id": 2208,
+          "type": 1,
+          "parentId": 30128,
+          "menuType": "MI",
+          "txtId": 455,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2207": {
+          "id": 2207,
+          "type": 2,
+          "parentId": 30128,
+          "menuType": "MI",
+          "txtId": 669,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 2,
+            "value": 0
+          }
+        },
+        "2205": {
+          "id": 2205,
+          "type": 1,
+          "parentId": 30128,
+          "menuType": "MI",
+          "txtId": 1005,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2246": {
+          "id": 2246,
+          "type": 10,
+          "parentId": 30128,
+          "menuType": "MI",
+          "txtId": 1223,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "2209": {
+          "id": 2209,
+          "type": 1,
+          "parentId": 30113,
+          "menuType": "MI",
+          "txtId": 883,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2210": {
+          "id": 2210,
+          "type": 1,
+          "parentId": 30113,
+          "menuType": "MI",
+          "txtId": 381,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2211": {
+          "id": 2211,
+          "type": 11,
+          "parentId": 30113,
+          "menuType": "MI",
+          "txtId": 326,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 862,
+                "value": 0
+              },
+              {
+                "txtId": 863,
+                "value": 1
+              }
+            ],
+            "value": 0
+          }
+        },
+        "2245": {
+          "id": 2245,
+          "type": 11,
+          "parentId": 30113,
+          "menuType": "MI",
+          "txtId": 902,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 192,
+                "value": 2
+              },
+              {
+                "txtId": 3209,
+                "value": 10
+              }
+            ],
+            "value": 2
+          }
+        },
+        "30137": {
+          "id": 30137,
+          "type": 0,
+          "parentId": 30113,
+          "menuType": "MI",
+          "txtId": 464,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2212": {
+          "id": 2212,
+          "type": 10,
+          "parentId": 30137,
+          "menuType": "MI",
+          "txtId": 950,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "2213": {
+          "id": 2213,
+          "type": 1,
+          "parentId": 30137,
+          "menuType": "MI",
+          "txtId": 779,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "30140": {
+          "id": 30140,
+          "type": 0,
+          "parentId": 30113,
+          "menuType": "MI",
+          "txtId": 465,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2214": {
+          "id": 2214,
+          "type": 10,
+          "parentId": 30140,
+          "menuType": "MI",
+          "txtId": 950,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "2215": {
+          "id": 2215,
+          "type": 1,
+          "parentId": 30140,
+          "menuType": "MI",
+          "txtId": 780,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2275": {
+          "id": 2275,
+          "type": 1,
+          "parentId": 30140,
+          "menuType": "MI",
+          "txtId": 692,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2276": {
+          "id": 2276,
+          "type": 1,
+          "parentId": 30140,
+          "menuType": "MI",
+          "txtId": 636,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "30146": {
+          "id": 30146,
+          "type": 0,
+          "parentId": 30113,
+          "menuType": "MI",
+          "txtId": 585,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2243": {
+          "id": 2243,
+          "type": 11,
+          "parentId": 30146,
+          "menuType": "MI",
+          "txtId": 662,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 995,
+                "value": 1
+              },
+              {
+                "txtId": 994,
+                "value": 0
+              },
+              {
+                "txtId": 951,
+                "value": 2
+              }
+            ],
+            "value": 1
+          }
+        },
+        "2244": {
+          "id": 2244,
+          "type": 1,
+          "parentId": 30146,
+          "menuType": "MI",
+          "txtId": 763,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "30163": {
+          "id": 30163,
+          "type": 0,
+          "parentId": 30113,
+          "menuType": "MI",
+          "txtId": 824,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "4200": {
+          "id": 4200,
+          "type": 10,
+          "parentId": 30163,
+          "menuType": "MI",
+          "txtId": 953,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "30165": {
+          "id": 30165,
+          "type": 0,
+          "parentId": 30163,
+          "menuType": "MI",
+          "txtId": 845,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "4201": {
+          "id": 4201,
+          "type": 12,
+          "parentId": 30165,
+          "menuType": "MI",
+          "txtId": 824,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 1,
+            "values": []
+          }
+        },
+        "4202": {
+          "id": 4202,
+          "type": 12,
+          "parentId": 30165,
+          "menuType": "MI",
+          "txtId": 824,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 2,
+            "values": []
+          }
+        },
+        "4203": {
+          "id": 4203,
+          "type": 12,
+          "parentId": 30165,
+          "menuType": "MI",
+          "txtId": 824,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 3,
+            "values": []
+          }
+        },
+        "4204": {
+          "id": 4204,
+          "type": 12,
+          "parentId": 30165,
+          "menuType": "MI",
+          "txtId": 824,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 4,
+            "values": []
+          }
+        },
+        "4205": {
+          "id": 4205,
+          "type": 12,
+          "parentId": 30165,
+          "menuType": "MI",
+          "txtId": 824,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 5,
+            "values": []
+          }
+        },
+        "4206": {
+          "id": 4206,
+          "type": 12,
+          "parentId": 30165,
+          "menuType": "MI",
+          "txtId": 824,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 6,
+            "values": []
+          }
+        },
+        "4207": {
+          "id": 4207,
+          "type": 12,
+          "parentId": 30165,
+          "menuType": "MI",
+          "txtId": 824,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 0,
+            "values": []
+          }
+        },
+        "2224": {
+          "id": 2224,
+          "type": 20,
+          "parentId": 30113,
+          "menuType": "MI",
+          "txtId": 839,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "type": 1,
+            "value": -1
+          }
+        },
+        "30176": {
+          "id": 30176,
+          "type": 0,
+          "parentId": 30112,
+          "menuType": "MI",
+          "txtId": 988,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2427": {
+          "id": 2427,
+          "type": 10,
+          "parentId": 30176,
+          "menuType": "MI",
+          "txtId": 953,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "2429": {
+          "id": 2429,
+          "type": 1,
+          "parentId": 30176,
+          "menuType": "MI",
+          "txtId": 759,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2428": {
+          "id": 2428,
+          "type": 20,
+          "parentId": 30176,
+          "menuType": "MI",
+          "txtId": 312,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "type": 1,
+            "value": -1
+          }
+        },
+        "2402": {
+          "id": 2402,
+          "type": 1,
+          "parentId": 30176,
+          "menuType": "MI",
+          "txtId": 692,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2403": {
+          "id": 2403,
+          "type": 1,
+          "parentId": 30176,
+          "menuType": "MI",
+          "txtId": 397,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2421": {
+          "id": 2421,
+          "type": 3,
+          "parentId": 30176,
+          "menuType": "MI",
+          "txtId": 143,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "2423": {
+          "id": 2423,
+          "type": 1,
+          "parentId": 30176,
+          "menuType": "MI",
+          "txtId": 636,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2400": {
+          "id": 2400,
+          "type": 11,
+          "parentId": 30176,
+          "menuType": "MI",
+          "txtId": 830,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 831,
+                "value": 1
+              },
+              {
+                "txtId": 989,
+                "value": 2
+              }
+            ],
+            "value": 1
+          }
+        },
+        "30188": {
+          "id": 30188,
+          "type": 0,
+          "parentId": 30176,
+          "menuType": "MI",
+          "txtId": 565,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2416": {
+          "id": 2416,
+          "type": 10,
+          "parentId": 30188,
+          "menuType": "MI",
+          "txtId": 950,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "2417": {
+          "id": 2417,
+          "type": 30,
+          "parentId": 30188,
+          "menuType": "MI",
+          "txtId": 342,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "points": [
+              {
+                "position": -20,
+                "value": 60
+              },
+              {
+                "position": -10,
+                "value": 55
+              },
+              {
+                "position": 0,
+                "value": 50
+              },
+              {
+                "position": 10,
+                "value": 45
+              }
+            ]
+          }
+        },
+        "30191": {
+          "id": 30191,
+          "type": 0,
+          "parentId": 30176,
+          "menuType": "MI",
+          "txtId": 642,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2404": {
+          "id": 2404,
+          "type": 11,
+          "parentId": 30191,
+          "menuType": "MI",
+          "txtId": 642,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 715,
+                "value": 0
+              },
+              {
+                "txtId": 3210,
+                "value": 2
+              },
+              {
+                "txtId": 1117,
+                "value": 3
+              },
+              {
+                "txtId": 647,
+                "value": 1
+              }
+            ],
+            "value": 0
+          }
+        },
+        "2408": {
+          "id": 2408,
+          "type": 1,
+          "parentId": 30191,
+          "menuType": "MI",
+          "txtId": 455,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2407": {
+          "id": 2407,
+          "type": 2,
+          "parentId": 30191,
+          "menuType": "MI",
+          "txtId": 669,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 2,
+            "value": 0
+          }
+        },
+        "2405": {
+          "id": 2405,
+          "type": 1,
+          "parentId": 30191,
+          "menuType": "MI",
+          "txtId": 1005,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2446": {
+          "id": 2446,
+          "type": 10,
+          "parentId": 30191,
+          "menuType": "MI",
+          "txtId": 1223,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "2409": {
+          "id": 2409,
+          "type": 1,
+          "parentId": 30176,
+          "menuType": "MI",
+          "txtId": 883,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2410": {
+          "id": 2410,
+          "type": 1,
+          "parentId": 30176,
+          "menuType": "MI",
+          "txtId": 381,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2406": {
+          "id": 2406,
+          "type": 11,
+          "parentId": 30176,
+          "menuType": "MI",
+          "txtId": 903,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 231,
+                "value": 1
+              },
+              {
+                "txtId": 232,
+                "value": 0
+              }
+            ],
+            "value": 1
+          }
+        },
+        "2445": {
+          "id": 2445,
+          "type": 11,
+          "parentId": 30176,
+          "menuType": "MI",
+          "txtId": 902,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 192,
+                "value": 2
+              },
+              {
+                "txtId": 3209,
+                "value": 10
+              }
+            ],
+            "value": 2
+          }
+        },
+        "30203": {
+          "id": 30203,
+          "type": 0,
+          "parentId": 30176,
+          "menuType": "MI",
+          "txtId": 465,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2414": {
+          "id": 2414,
+          "type": 10,
+          "parentId": 30203,
+          "menuType": "MI",
+          "txtId": 950,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "2415": {
+          "id": 2415,
+          "type": 1,
+          "parentId": 30203,
+          "menuType": "MI",
+          "txtId": 780,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2422": {
+          "id": 2422,
+          "type": 1,
+          "parentId": 30203,
+          "menuType": "MI",
+          "txtId": 779,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "30209": {
+          "id": 30209,
+          "type": 0,
+          "parentId": 30176,
+          "menuType": "MI",
+          "txtId": 585,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2443": {
+          "id": 2443,
+          "type": 11,
+          "parentId": 30209,
+          "menuType": "MI",
+          "txtId": 662,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 995,
+                "value": 1
+              },
+              {
+                "txtId": 994,
+                "value": 0
+              },
+              {
+                "txtId": 951,
+                "value": 2
+              }
+            ],
+            "value": 1
+          }
+        },
+        "2444": {
+          "id": 2444,
+          "type": 1,
+          "parentId": 30209,
+          "menuType": "MI",
+          "txtId": 763,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2424": {
+          "id": 2424,
+          "type": 20,
+          "parentId": 30176,
+          "menuType": "MI",
+          "txtId": 839,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "type": 1,
+            "value": -1
+          }
+        },
+        "30226": {
+          "id": 30226,
+          "type": 0,
+          "parentId": 30112,
+          "menuType": "MI",
+          "txtId": 985,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2527": {
+          "id": 2527,
+          "type": 10,
+          "parentId": 30226,
+          "menuType": "MI",
+          "txtId": 953,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "2529": {
+          "id": 2529,
+          "type": 1,
+          "parentId": 30226,
+          "menuType": "MI",
+          "txtId": 759,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2528": {
+          "id": 2528,
+          "type": 20,
+          "parentId": 30226,
+          "menuType": "MI",
+          "txtId": 312,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "type": 1,
+            "value": -1
+          }
+        },
+        "2502": {
+          "id": 2502,
+          "type": 1,
+          "parentId": 30226,
+          "menuType": "MI",
+          "txtId": 692,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2503": {
+          "id": 2503,
+          "type": 1,
+          "parentId": 30226,
+          "menuType": "MI",
+          "txtId": 397,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2521": {
+          "id": 2521,
+          "type": 3,
+          "parentId": 30226,
+          "menuType": "MI",
+          "txtId": 143,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "2523": {
+          "id": 2523,
+          "type": 1,
+          "parentId": 30226,
+          "menuType": "MI",
+          "txtId": 636,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2500": {
+          "id": 2500,
+          "type": 11,
+          "parentId": 30226,
+          "menuType": "MI",
+          "txtId": 830,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 831,
+                "value": 1
+              },
+              {
+                "txtId": 989,
+                "value": 2
+              }
+            ],
+            "value": 1
+          }
+        },
+        "30238": {
+          "id": 30238,
+          "type": 0,
+          "parentId": 30226,
+          "menuType": "MI",
+          "txtId": 565,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2516": {
+          "id": 2516,
+          "type": 10,
+          "parentId": 30238,
+          "menuType": "MI",
+          "txtId": 950,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "2517": {
+          "id": 2517,
+          "type": 30,
+          "parentId": 30238,
+          "menuType": "MI",
+          "txtId": 342,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "points": [
+              {
+                "position": -20,
+                "value": 60
+              },
+              {
+                "position": -10,
+                "value": 55
+              },
+              {
+                "position": 0,
+                "value": 50
+              },
+              {
+                "position": 10,
+                "value": 45
+              }
+            ]
+          }
+        },
+        "30241": {
+          "id": 30241,
+          "type": 0,
+          "parentId": 30226,
+          "menuType": "MI",
+          "txtId": 642,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2504": {
+          "id": 2504,
+          "type": 11,
+          "parentId": 30241,
+          "menuType": "MI",
+          "txtId": 642,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 715,
+                "value": 0
+              },
+              {
+                "txtId": 3210,
+                "value": 2
+              },
+              {
+                "txtId": 1117,
+                "value": 3
+              },
+              {
+                "txtId": 647,
+                "value": 1
+              }
+            ],
+            "value": 0
+          }
+        },
+        "2508": {
+          "id": 2508,
+          "type": 1,
+          "parentId": 30241,
+          "menuType": "MI",
+          "txtId": 455,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2507": {
+          "id": 2507,
+          "type": 2,
+          "parentId": 30241,
+          "menuType": "MI",
+          "txtId": 669,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 2,
+            "value": 0
+          }
+        },
+        "2505": {
+          "id": 2505,
+          "type": 1,
+          "parentId": 30241,
+          "menuType": "MI",
+          "txtId": 1005,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2546": {
+          "id": 2546,
+          "type": 10,
+          "parentId": 30241,
+          "menuType": "MI",
+          "txtId": 1223,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "2509": {
+          "id": 2509,
+          "type": 1,
+          "parentId": 30226,
+          "menuType": "MI",
+          "txtId": 883,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2510": {
+          "id": 2510,
+          "type": 1,
+          "parentId": 30226,
+          "menuType": "MI",
+          "txtId": 381,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2506": {
+          "id": 2506,
+          "type": 11,
+          "parentId": 30226,
+          "menuType": "MI",
+          "txtId": 903,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 231,
+                "value": 1
+              },
+              {
+                "txtId": 232,
+                "value": 0
+              }
+            ],
+            "value": 1
+          }
+        },
+        "2545": {
+          "id": 2545,
+          "type": 11,
+          "parentId": 30226,
+          "menuType": "MI",
+          "txtId": 902,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 192,
+                "value": 2
+              },
+              {
+                "txtId": 3209,
+                "value": 10
+              }
+            ],
+            "value": 2
+          }
+        },
+        "30253": {
+          "id": 30253,
+          "type": 0,
+          "parentId": 30226,
+          "menuType": "MI",
+          "txtId": 465,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2514": {
+          "id": 2514,
+          "type": 10,
+          "parentId": 30253,
+          "menuType": "MI",
+          "txtId": 950,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "2515": {
+          "id": 2515,
+          "type": 1,
+          "parentId": 30253,
+          "menuType": "MI",
+          "txtId": 780,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2522": {
+          "id": 2522,
+          "type": 1,
+          "parentId": 30253,
+          "menuType": "MI",
+          "txtId": 779,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "30259": {
+          "id": 30259,
+          "type": 0,
+          "parentId": 30226,
+          "menuType": "MI",
+          "txtId": 585,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2543": {
+          "id": 2543,
+          "type": 11,
+          "parentId": 30259,
+          "menuType": "MI",
+          "txtId": 662,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 995,
+                "value": 1
+              },
+              {
+                "txtId": 994,
+                "value": 0
+              },
+              {
+                "txtId": 951,
+                "value": 2
+              }
+            ],
+            "value": 1
+          }
+        },
+        "2544": {
+          "id": 2544,
+          "type": 1,
+          "parentId": 30259,
+          "menuType": "MI",
+          "txtId": 763,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2524": {
+          "id": 2524,
+          "type": 20,
+          "parentId": 30226,
+          "menuType": "MI",
+          "txtId": 839,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "type": 1,
+            "value": -1
+          }
+        },
+        "30276": {
+          "id": 30276,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MI",
+          "txtId": 3236,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "3500": {
+          "id": 3500,
+          "type": 11,
+          "parentId": 30276,
+          "menuType": "MI",
+          "txtId": 662,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 922,
+                "value": 0
+              },
+              {
+                "txtId": 571,
+                "value": 4
+              },
+              {
+                "txtId": 573,
+                "value": 5
+              },
+              {
+                "txtId": 575,
+                "value": 3
+              },
+              {
+                "txtId": 582,
+                "value": 1
+              },
+              {
+                "txtId": 241,
+                "value": 6
+              },
+              {
+                "txtId": 3752,
+                "value": 14
+              },
+              {
+                "txtId": 1635,
+                "value": 21
+              }
+            ],
+            "value": 0
+          }
+        },
+        "30278": {
+          "id": 30278,
+          "type": 0,
+          "parentId": 30276,
+          "menuType": "MI",
+          "txtId": 571,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "3524": {
+          "id": 3524,
+          "type": 3,
+          "parentId": 30278,
+          "menuType": "MI",
+          "txtId": 156,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "3529": {
+          "id": 3529,
+          "type": 3,
+          "parentId": 30278,
+          "menuType": "MI",
+          "txtId": 161,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "30281": {
+          "id": 30281,
+          "type": 15,
+          "parentId": 30278,
+          "menuType": "MI",
+          "txtId": 642,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0,
+            "options": [
+              648,
+              644
+            ]
+          }
+        },
+        "3525": {
+          "id": 3525,
+          "type": 1,
+          "parentId": 30278,
+          "menuType": "MI",
+          "txtId": 767,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "3526": {
+          "id": 3526,
+          "type": 1,
+          "parentId": 30278,
+          "menuType": "MI",
+          "txtId": 294,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "3527": {
+          "id": 3527,
+          "type": 11,
+          "parentId": 30278,
+          "menuType": "MI",
+          "txtId": 899,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 192,
+                "value": 2
+              },
+              {
+                "txtId": 194,
+                "value": 3
+              },
+              {
+                "txtId": 221,
+                "value": 6
+              },
+              {
+                "txtId": 222,
+                "value": 7
+              },
+              {
+                "txtId": 213,
+                "value": 8
+              },
+              {
+                "txtId": 210,
+                "value": 9
+              },
+              {
+                "txtId": 196,
+                "value": 10
+              },
+              {
+                "txtId": 197,
+                "value": 11
+              }
+            ],
+            "value": 2
+          }
+        },
+        "30287": {
+          "id": 30287,
+          "type": 0,
+          "parentId": 30276,
+          "menuType": "MI",
+          "txtId": 573,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "3530": {
+          "id": 3530,
+          "type": 1,
+          "parentId": 30287,
+          "menuType": "MI",
+          "txtId": 610,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "3531": {
+          "id": 3531,
+          "type": 1,
+          "parentId": 30287,
+          "menuType": "MI",
+          "txtId": 294,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "3532": {
+          "id": 3532,
+          "type": 1,
+          "parentId": 30287,
+          "menuType": "MI",
+          "txtId": 760,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "3533": {
+          "id": 3533,
+          "type": 1,
+          "parentId": 30287,
+          "menuType": "MI",
+          "txtId": 779,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "3534": {
+          "id": 3534,
+          "type": 11,
+          "parentId": 30287,
+          "menuType": "MI",
+          "txtId": 900,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 192,
+                "value": 2
+              },
+              {
+                "txtId": 194,
+                "value": 3
+              },
+              {
+                "txtId": 221,
+                "value": 6
+              },
+              {
+                "txtId": 222,
+                "value": 7
+              },
+              {
+                "txtId": 213,
+                "value": 8
+              },
+              {
+                "txtId": 210,
+                "value": 9
+              },
+              {
+                "txtId": 196,
+                "value": 10
+              },
+              {
+                "txtId": 197,
+                "value": 11
+              }
+            ],
+            "value": 2
+          }
+        },
+        "3535": {
+          "id": 3535,
+          "type": 11,
+          "parentId": 30287,
+          "menuType": "MI",
+          "txtId": 901,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 192,
+                "value": 2
+              },
+              {
+                "txtId": 194,
+                "value": 3
+              },
+              {
+                "txtId": 221,
+                "value": 6
+              },
+              {
+                "txtId": 222,
+                "value": 7
+              },
+              {
+                "txtId": 213,
+                "value": 8
+              },
+              {
+                "txtId": 210,
+                "value": 9
+              },
+              {
+                "txtId": 196,
+                "value": 10
+              },
+              {
+                "txtId": 197,
+                "value": 11
+              }
+            ],
+            "value": 2
+          }
+        },
+        "30294": {
+          "id": 30294,
+          "type": 0,
+          "parentId": 30276,
+          "menuType": "MI",
+          "txtId": 575,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "3501": {
+          "id": 3501,
+          "type": 3,
+          "parentId": 30294,
+          "menuType": "MI",
+          "txtId": 156,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "3502": {
+          "id": 3502,
+          "type": 3,
+          "parentId": 30294,
+          "menuType": "MI",
+          "txtId": 161,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "30297": {
+          "id": 30297,
+          "type": 0,
+          "parentId": 30294,
+          "menuType": "MI",
+          "txtId": 546,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "3504": {
+          "id": 3504,
+          "type": 13,
+          "parentId": 30297,
+          "menuType": "MI",
+          "txtId": 0,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 4,
+            "value": 0,
+            "noZones": 48
+          }
+        },
+        "3505": {
+          "id": 3505,
+          "type": 13,
+          "parentId": 30297,
+          "menuType": "MI",
+          "txtId": 0,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 5,
+            "value": 0,
+            "noZones": 48
+          }
+        },
+        "3506": {
+          "id": 3506,
+          "type": 13,
+          "parentId": 30297,
+          "menuType": "MI",
+          "txtId": 0,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 6,
+            "value": 0,
+            "noZones": 48
+          }
+        },
+        "3507": {
+          "id": 3507,
+          "type": 13,
+          "parentId": 30297,
+          "menuType": "MI",
+          "txtId": 0,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 0,
+            "value": 0,
+            "noZones": 48
+          }
+        },
+        "3508": {
+          "id": 3508,
+          "type": 13,
+          "parentId": 30297,
+          "menuType": "MI",
+          "txtId": 0,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 1,
+            "value": 0,
+            "noZones": 48
+          }
+        },
+        "3509": {
+          "id": 3509,
+          "type": 13,
+          "parentId": 30297,
+          "menuType": "MI",
+          "txtId": 0,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 2,
+            "value": 0,
+            "noZones": 48
+          }
+        },
+        "3503": {
+          "id": 3503,
+          "type": 13,
+          "parentId": 30297,
+          "menuType": "MI",
+          "txtId": 0,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "dayId": 3,
+            "value": 0,
+            "noZones": 48
+          }
+        },
+        "30305": {
+          "id": 30305,
+          "type": 0,
+          "parentId": 30276,
+          "menuType": "MI",
+          "txtId": 582,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "3540": {
+          "id": 3540,
+          "type": 1,
+          "parentId": 30305,
+          "menuType": "MI",
+          "txtId": 780,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "3541": {
+          "id": 3541,
+          "type": 1,
+          "parentId": 30305,
+          "menuType": "MI",
+          "txtId": 779,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "3542": {
+          "id": 3542,
+          "type": 11,
+          "parentId": 30305,
+          "menuType": "MI",
+          "txtId": 900,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 192,
+                "value": 2
+              },
+              {
+                "txtId": 194,
+                "value": 3
+              },
+              {
+                "txtId": 221,
+                "value": 6
+              },
+              {
+                "txtId": 222,
+                "value": 7
+              },
+              {
+                "txtId": 213,
+                "value": 8
+              },
+              {
+                "txtId": 210,
+                "value": 9
+              },
+              {
+                "txtId": 196,
+                "value": 10
+              },
+              {
+                "txtId": 197,
+                "value": 11
+              }
+            ],
+            "value": 2
+          }
+        },
+        "3543": {
+          "id": 3543,
+          "type": 11,
+          "parentId": 30305,
+          "menuType": "MI",
+          "txtId": 901,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 192,
+                "value": 2
+              },
+              {
+                "txtId": 194,
+                "value": 3
+              },
+              {
+                "txtId": 221,
+                "value": 6
+              },
+              {
+                "txtId": 222,
+                "value": 7
+              },
+              {
+                "txtId": 213,
+                "value": 8
+              },
+              {
+                "txtId": 210,
+                "value": 9
+              },
+              {
+                "txtId": 196,
+                "value": 10
+              },
+              {
+                "txtId": 197,
+                "value": 11
+              }
+            ],
+            "value": 2
+          }
+        },
+        "30310": {
+          "id": 30310,
+          "type": 0,
+          "parentId": 30276,
+          "menuType": "MI",
+          "txtId": 241,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "3725": {
+          "id": 3725,
+          "type": 3,
+          "parentId": 30310,
+          "menuType": "MI",
+          "txtId": 156,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "3695": {
+          "id": 3695,
+          "type": 4,
+          "parentId": 30310,
+          "menuType": "MI",
+          "txtId": 284,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 4,
+            "value": 0
+          }
+        },
+        "30313": {
+          "id": 30313,
+          "type": 15,
+          "parentId": 30310,
+          "menuType": "MI",
+          "txtId": 1906,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0,
+            "options": [
+              589,
+              893,
+              707,
+              234,
+              515,
+              702,
+              444
+            ]
+          }
+        },
+        "30321": {
+          "id": 30321,
+          "type": 0,
+          "parentId": 30276,
+          "menuType": "MI",
+          "txtId": 3752,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "4600": {
+          "id": 4600,
+          "type": 1,
+          "parentId": 30321,
+          "menuType": "MI",
+          "txtId": 1079,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "4601": {
+          "id": 4601,
+          "type": 1,
+          "parentId": 30321,
+          "menuType": "MI",
+          "txtId": 1040,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "30324": {
+          "id": 30324,
+          "type": 0,
+          "parentId": 30276,
+          "menuType": "MI",
+          "txtId": 1635,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "10207": {
+          "id": 10207,
+          "type": 1,
+          "parentId": 30324,
+          "menuType": "MI",
+          "txtId": 1079,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "10746": {
+          "id": 10746,
+          "type": 10,
+          "parentId": 0,
+          "menuType": "MI",
+          "txtId": 4714,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "30326": {
+          "id": 30326,
+          "type": 15,
+          "parentId": 0,
+          "menuType": "MI",
+          "txtId": 642,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0,
+            "options": [
+              1117,
+              644,
+              572
+            ]
+          }
+        },
+        "2750": {
+          "id": 2750,
+          "type": 10,
+          "parentId": 0,
+          "menuType": "MI",
+          "txtId": 281,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "4525": {
+          "id": 4525,
+          "type": 10,
+          "parentId": 0,
+          "menuType": "MI",
+          "txtId": 1761,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "2073": {
+          "id": 2073,
+          "type": 10,
+          "parentId": 0,
+          "menuType": "MI",
+          "txtId": 1974,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "10200": {
+          "id": 10200,
+          "type": 10,
+          "parentId": 0,
+          "menuType": "MI",
+          "txtId": 574,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "30335": {
+          "id": 30335,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MI",
+          "txtId": 316,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "253": {
+          "id": 253,
+          "type": 20,
+          "parentId": 30335,
+          "menuType": "MI",
+          "txtId": 967,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "type": 1,
+            "value": -1
+          }
+        },
+        "254": {
+          "id": 254,
+          "type": 20,
+          "parentId": 30335,
+          "menuType": "MI",
+          "txtId": 968,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "type": 1,
+            "value": -1
+          }
+        },
+        "30339": {
+          "id": 30339,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MI",
+          "txtId": 315,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "4020": {
+          "id": 4020,
+          "type": 2,
+          "parentId": 30339,
+          "menuType": "MI",
+          "txtId": 1118,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 2,
+            "value": 0
+          }
+        },
+        "4021": {
+          "id": 4021,
+          "type": 1,
+          "parentId": 30339,
+          "menuType": "MI",
+          "txtId": 1119,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2812": {
+          "id": 2812,
+          "type": 10,
+          "parentId": 0,
+          "menuType": "MI",
+          "txtId": 426,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "261": {
+          "id": 261,
+          "type": 20,
+          "parentId": 0,
+          "menuType": "MI",
+          "txtId": 839,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "type": 1,
+            "value": -1
+          }
+        }
+      }
+    },
+    "MS": {
+      "status": "ok",
+      "elements": {
+        "0": {
+          "id": 0,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MS",
+          "txtId": 391,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "30434": {
+          "id": 30434,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MS",
+          "txtId": 239,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "4968": {
+          "id": 4968,
+          "type": 10,
+          "parentId": 30434,
+          "menuType": "MS",
+          "txtId": 953,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "3765": {
+          "id": 3765,
+          "type": 4,
+          "parentId": 30434,
+          "menuType": "MS",
+          "txtId": 284,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 4,
+            "value": 0
+          }
+        },
+        "4980": {
+          "id": 4980,
+          "type": 4,
+          "parentId": 30434,
+          "menuType": "MS",
+          "txtId": 2210,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 4,
+            "value": 0
+          }
+        },
+        "4958": {
+          "id": 4958,
+          "type": 1,
+          "parentId": 30434,
+          "menuType": "MS",
+          "txtId": 298,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "4969": {
+          "id": 4969,
+          "type": 3,
+          "parentId": 30434,
+          "menuType": "MS",
+          "txtId": 3819,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "30347": {
+          "id": 30347,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MS",
+          "txtId": 850,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "30348": {
+          "id": 30348,
+          "type": 0,
+          "parentId": 30347,
+          "menuType": "MS",
+          "txtId": 511,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2739": {
+          "id": 2739,
+          "type": 1,
+          "parentId": 30348,
+          "menuType": "MS",
+          "txtId": 3211,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2735": {
+          "id": 2735,
+          "type": 3,
+          "parentId": 30348,
+          "menuType": "MS",
+          "txtId": 3212,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "2730": {
+          "id": 2730,
+          "type": 3,
+          "parentId": 30348,
+          "menuType": "MS",
+          "txtId": 149,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "2723": {
+          "id": 2723,
+          "type": 1,
+          "parentId": 30348,
+          "menuType": "MS",
+          "txtId": 460,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2710": {
+          "id": 2710,
+          "type": 3,
+          "parentId": 30348,
+          "menuType": "MS",
+          "txtId": 932,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "30354": {
+          "id": 30354,
+          "type": 0,
+          "parentId": 30348,
+          "menuType": "MS",
+          "txtId": 487,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "30355": {
+          "id": 30355,
+          "type": 0,
+          "parentId": 30354,
+          "menuType": "MS",
+          "txtId": 4643,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2721": {
+          "id": 2721,
+          "type": 3,
+          "parentId": 30355,
+          "menuType": "MS",
+          "txtId": 486,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "2734": {
+          "id": 2734,
+          "type": 1,
+          "parentId": 30355,
+          "menuType": "MS",
+          "txtId": 2756,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2725": {
+          "id": 2725,
+          "type": 1,
+          "parentId": 30355,
+          "menuType": "MS",
+          "txtId": 156,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2726": {
+          "id": 2726,
+          "type": 1,
+          "parentId": 30355,
+          "menuType": "MS",
+          "txtId": 161,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "30360": {
+          "id": 30360,
+          "type": 0,
+          "parentId": 30354,
+          "menuType": "MS",
+          "txtId": 4645,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "10515": {
+          "id": 10515,
+          "type": 3,
+          "parentId": 30360,
+          "menuType": "MS",
+          "txtId": 486,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "10516": {
+          "id": 10516,
+          "type": 1,
+          "parentId": 30360,
+          "menuType": "MS",
+          "txtId": 2756,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "10518": {
+          "id": 10518,
+          "type": 1,
+          "parentId": 30360,
+          "menuType": "MS",
+          "txtId": 156,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "10519": {
+          "id": 10519,
+          "type": 1,
+          "parentId": 30360,
+          "menuType": "MS",
+          "txtId": 161,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "4867": {
+          "id": 4867,
+          "type": 3,
+          "parentId": 30354,
+          "menuType": "MS",
+          "txtId": 3537,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "2727": {
+          "id": 2727,
+          "type": 1,
+          "parentId": 30348,
+          "menuType": "MS",
+          "txtId": 311,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "30367": {
+          "id": 30367,
+          "type": 0,
+          "parentId": 30347,
+          "menuType": "MS",
+          "txtId": 510,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "30368": {
+          "id": 30368,
+          "type": 0,
+          "parentId": 30367,
+          "menuType": "MS",
+          "txtId": 525,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2768": {
+          "id": 2768,
+          "type": 10,
+          "parentId": 30368,
+          "menuType": "MS",
+          "txtId": 921,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "30370": {
+          "id": 30370,
+          "type": 0,
+          "parentId": 30368,
+          "menuType": "MS",
+          "txtId": 440,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2753": {
+          "id": 2753,
+          "type": 3,
+          "parentId": 30367,
+          "menuType": "MS",
+          "txtId": 336,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "2731": {
+          "id": 2731,
+          "type": 4,
+          "parentId": 30367,
+          "menuType": "MS",
+          "txtId": 476,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 4,
+            "value": 0
+          }
+        },
+        "2130": {
+          "id": 2130,
+          "type": 1,
+          "parentId": 30367,
+          "menuType": "MS",
+          "txtId": 409,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2131": {
+          "id": 2131,
+          "type": 1,
+          "parentId": 30367,
+          "menuType": "MS",
+          "txtId": 371,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2132": {
+          "id": 2132,
+          "type": 1,
+          "parentId": 30367,
+          "menuType": "MS",
+          "txtId": 411,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2133": {
+          "id": 2133,
+          "type": 1,
+          "parentId": 30367,
+          "menuType": "MS",
+          "txtId": 373,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2140": {
+          "id": 2140,
+          "type": 1,
+          "parentId": 30367,
+          "menuType": "MS",
+          "txtId": 403,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2141": {
+          "id": 2141,
+          "type": 1,
+          "parentId": 30367,
+          "menuType": "MS",
+          "txtId": 384,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2142": {
+          "id": 2142,
+          "type": 1,
+          "parentId": 30367,
+          "menuType": "MS",
+          "txtId": 1895,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2143": {
+          "id": 2143,
+          "type": 1,
+          "parentId": 30367,
+          "menuType": "MS",
+          "txtId": 1897,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2116": {
+          "id": 2116,
+          "type": 1,
+          "parentId": 30367,
+          "menuType": "MS",
+          "txtId": 419,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2114": {
+          "id": 2114,
+          "type": 1,
+          "parentId": 30367,
+          "menuType": "MS",
+          "txtId": 1622,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2115": {
+          "id": 2115,
+          "type": 1,
+          "parentId": 30367,
+          "menuType": "MS",
+          "txtId": 1621,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2754": {
+          "id": 2754,
+          "type": 1,
+          "parentId": 30367,
+          "menuType": "MS",
+          "txtId": 888,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "30391": {
+          "id": 30391,
+          "type": 0,
+          "parentId": 30347,
+          "menuType": "MS",
+          "txtId": 512,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2740": {
+          "id": 2740,
+          "type": 3,
+          "parentId": 30391,
+          "menuType": "MS",
+          "txtId": 934,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "2741": {
+          "id": 2741,
+          "type": 3,
+          "parentId": 30391,
+          "menuType": "MS",
+          "txtId": 177,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "2742": {
+          "id": 2742,
+          "type": 1,
+          "parentId": 30391,
+          "menuType": "MS",
+          "txtId": 77,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "30395": {
+          "id": 30395,
+          "type": 0,
+          "parentId": 30347,
+          "menuType": "MS",
+          "txtId": 344,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2100": {
+          "id": 2100,
+          "type": 10,
+          "parentId": 30395,
+          "menuType": "MS",
+          "txtId": 704,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "2104": {
+          "id": 2104,
+          "type": 3,
+          "parentId": 30395,
+          "menuType": "MS",
+          "txtId": 145,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "2101": {
+          "id": 2101,
+          "type": 1,
+          "parentId": 30395,
+          "menuType": "MS",
+          "txtId": 131,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2102": {
+          "id": 2102,
+          "type": 1,
+          "parentId": 30395,
+          "menuType": "MS",
+          "txtId": 695,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2103": {
+          "id": 2103,
+          "type": 1,
+          "parentId": 30395,
+          "menuType": "MS",
+          "txtId": 696,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2109": {
+          "id": 2109,
+          "type": 10,
+          "parentId": 30395,
+          "menuType": "MS",
+          "txtId": 732,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "2105": {
+          "id": 2105,
+          "type": 1,
+          "parentId": 30395,
+          "menuType": "MS",
+          "txtId": 407,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2106": {
+          "id": 2106,
+          "type": 1,
+          "parentId": 30395,
+          "menuType": "MS",
+          "txtId": 387,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2107": {
+          "id": 2107,
+          "type": 2,
+          "parentId": 30395,
+          "menuType": "MS",
+          "txtId": 345,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 2,
+            "value": 0
+          }
+        },
+        "2108": {
+          "id": 2108,
+          "type": 2,
+          "parentId": 30395,
+          "menuType": "MS",
+          "txtId": 346,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 2,
+            "value": 0
+          }
+        },
+        "2120": {
+          "id": 2120,
+          "type": 11,
+          "parentId": 0,
+          "menuType": "MS",
+          "txtId": 419,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 3,
+                "value": 120
+              },
+              {
+                "txtId": 7,
+                "value": 150
+              },
+              {
+                "txtId": 12,
+                "value": 160
+              },
+              {
+                "txtId": 16,
+                "value": 200
+              },
+              {
+                "txtId": 21,
+                "value": 220
+              },
+              {
+                "txtId": 22,
+                "value": 250
+              },
+              {
+                "txtId": 29,
+                "value": 300
+              },
+              {
+                "txtId": 34,
+                "value": 350
+              },
+              {
+                "txtId": 40,
+                "value": 400
+              },
+              {
+                "txtId": 42,
+                "value": 500
+              },
+              {
+                "txtId": 49,
+                "value": 750
+              }
+            ],
+            "value": 120
+          }
+        },
+        "30407": {
+          "id": 30407,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MS",
+          "txtId": 1268,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "30408": {
+          "id": 30408,
+          "type": 0,
+          "parentId": 30407,
+          "menuType": "MS",
+          "txtId": 3489,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "3648": {
+          "id": 3648,
+          "type": 2,
+          "parentId": 30408,
+          "menuType": "MS",
+          "txtId": 1978,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 2,
+            "value": 0
+          }
+        },
+        "3646": {
+          "id": 3646,
+          "type": 2,
+          "parentId": 30408,
+          "menuType": "MS",
+          "txtId": 3411,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 2,
+            "value": 0
+          }
+        },
+        "30411": {
+          "id": 30411,
+          "type": 0,
+          "parentId": 30408,
+          "menuType": "MS",
+          "txtId": 3740,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "4749": {
+          "id": 4749,
+          "type": 3,
+          "parentId": 30411,
+          "menuType": "MS",
+          "txtId": 2953,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "4912": {
+          "id": 4912,
+          "type": 10,
+          "parentId": 30407,
+          "menuType": "MS",
+          "txtId": 4122,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "30414": {
+          "id": 30414,
+          "type": 35,
+          "parentId": 0,
+          "menuType": "MS",
+          "txtId": 434,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "password": "password"
+          }
+        },
+        "2170": {
+          "id": 2170,
+          "type": 1,
+          "parentId": 30415,
+          "menuType": "MS",
+          "txtId": 406,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2171": {
+          "id": 2171,
+          "type": 1,
+          "parentId": 30415,
+          "menuType": "MS",
+          "txtId": 368,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2172": {
+          "id": 2172,
+          "type": 1,
+          "parentId": 30415,
+          "menuType": "MS",
+          "txtId": 396,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2173": {
+          "id": 2173,
+          "type": 1,
+          "parentId": 30415,
+          "menuType": "MS",
+          "txtId": 362,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2174": {
+          "id": 2174,
+          "type": 1,
+          "parentId": 30415,
+          "menuType": "MS",
+          "txtId": 305,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "4785": {
+          "id": 4785,
+          "type": 1,
+          "parentId": 30415,
+          "menuType": "MS",
+          "txtId": 2992,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "4786": {
+          "id": 4786,
+          "type": 1,
+          "parentId": 30415,
+          "menuType": "MS",
+          "txtId": 2993,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "4787": {
+          "id": 4787,
+          "type": 1,
+          "parentId": 30415,
+          "menuType": "MS",
+          "txtId": 2995,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "4788": {
+          "id": 4788,
+          "type": 1,
+          "parentId": 30415,
+          "menuType": "MS",
+          "txtId": 2996,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "4789": {
+          "id": 4789,
+          "type": 1,
+          "parentId": 30415,
+          "menuType": "MS",
+          "txtId": 2997,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "30426": {
+          "id": 30426,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MS",
+          "txtId": 291,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2178": {
+          "id": 2178,
+          "type": 10,
+          "parentId": 30426,
+          "menuType": "MS",
+          "txtId": 1258,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "2179": {
+          "id": 2179,
+          "type": 1,
+          "parentId": 30426,
+          "menuType": "MS",
+          "txtId": 1310,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2136": {
+          "id": 2136,
+          "type": 10,
+          "parentId": 30426,
+          "menuType": "MS",
+          "txtId": 280,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "30430": {
+          "id": 30430,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MS",
+          "txtId": 641,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "3600": {
+          "id": 3600,
+          "type": 10,
+          "parentId": 30430,
+          "menuType": "MS",
+          "txtId": 947,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "3594": {
+          "id": 3594,
+          "type": 2,
+          "parentId": 30430,
+          "menuType": "MS",
+          "txtId": 1266,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 2,
+            "value": 0
+          }
+        },
+        "3596": {
+          "id": 3596,
+          "type": 3,
+          "parentId": 30430,
+          "menuType": "MS",
+          "txtId": 1195,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "30440": {
+          "id": 30440,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MS",
+          "txtId": 1625,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "4667": {
+          "id": 4667,
+          "type": 10,
+          "parentId": 30440,
+          "menuType": "MS",
+          "txtId": 950,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "4668": {
+          "id": 4668,
+          "type": 11,
+          "parentId": 30440,
+          "menuType": "MS",
+          "txtId": 814,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 565,
+                "value": 0
+              },
+              {
+                "txtId": 428,
+                "value": 1
+              }
+            ],
+            "value": 0
+          }
+        },
+        "30443": {
+          "id": 30443,
+          "type": 0,
+          "parentId": 30440,
+          "menuType": "MS",
+          "txtId": 1162,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "4672": {
+          "id": 4672,
+          "type": 11,
+          "parentId": 30443,
+          "menuType": "MS",
+          "txtId": 3455,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 3454,
+                "value": 0
+              },
+              {
+                "txtId": 2980,
+                "value": 1
+              }
+            ],
+            "value": 0
+          }
+        },
+        "4671": {
+          "id": 4671,
+          "type": 1,
+          "parentId": 30443,
+          "menuType": "MS",
+          "txtId": 3453,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "4673": {
+          "id": 4673,
+          "type": 11,
+          "parentId": 30443,
+          "menuType": "MS",
+          "txtId": 899,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 192,
+                "value": 2
+              },
+              {
+                "txtId": 196,
+                "value": 10
+              },
+              {
+                "txtId": 197,
+                "value": 11
+              }
+            ],
+            "value": 2
+          }
+        },
+        "4661": {
+          "id": 4661,
+          "type": 1,
+          "parentId": 30440,
+          "menuType": "MS",
+          "txtId": 294,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "4662": {
+          "id": 4662,
+          "type": 1,
+          "parentId": 30440,
+          "menuType": "MS",
+          "txtId": 1626,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "4665": {
+          "id": 4665,
+          "type": 1,
+          "parentId": 30440,
+          "menuType": "MS",
+          "txtId": 1629,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "4664": {
+          "id": 4664,
+          "type": 1,
+          "parentId": 30440,
+          "menuType": "MS",
+          "txtId": 1628,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "4663": {
+          "id": 4663,
+          "type": 1,
+          "parentId": 30440,
+          "menuType": "MS",
+          "txtId": 1627,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "4669": {
+          "id": 4669,
+          "type": 4,
+          "parentId": 30440,
+          "menuType": "MS",
+          "txtId": 1655,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 4,
+            "value": 0
+          }
+        },
+        "10206": {
+          "id": 10206,
+          "type": 4,
+          "parentId": 30440,
+          "menuType": "MS",
+          "txtId": 563,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 4,
+            "value": 0
+          }
+        },
+        "30454": {
+          "id": 30454,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MS",
+          "txtId": 676,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2706": {
+          "id": 2706,
+          "type": 10,
+          "parentId": 30454,
+          "menuType": "MS",
+          "txtId": 1258,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "2707": {
+          "id": 2707,
+          "type": 3,
+          "parentId": 30454,
+          "menuType": "MS",
+          "txtId": 143,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "2795": {
+          "id": 2795,
+          "type": 10,
+          "parentId": 30454,
+          "menuType": "MS",
+          "txtId": 2999,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "2705": {
+          "id": 2705,
+          "type": 10,
+          "parentId": 30454,
+          "menuType": "MS",
+          "txtId": 1272,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "30459": {
+          "id": 30459,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MS",
+          "txtId": 4785,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "10808": {
+          "id": 10808,
+          "type": 10,
+          "parentId": 30459,
+          "menuType": "MS",
+          "txtId": 4786,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "2729": {
+          "id": 2729,
+          "type": 10,
+          "parentId": 30459,
+          "menuType": "MS",
+          "txtId": 4787,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "value": 0
+          }
+        },
+        "10809": {
+          "id": 10809,
+          "type": 1,
+          "parentId": 30459,
+          "menuType": "MS",
+          "txtId": 1437,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "30463": {
+          "id": 30463,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MS",
+          "txtId": 441,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "2082": {
+          "id": 2082,
+          "type": 1,
+          "parentId": 30463,
+          "menuType": "MS",
+          "txtId": 365,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2070": {
+          "id": 2070,
+          "type": 1,
+          "parentId": 30463,
+          "menuType": "MS",
+          "txtId": 748,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2086": {
+          "id": 2086,
+          "type": 1,
+          "parentId": 30463,
+          "menuType": "MS",
+          "txtId": 400,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "1981": {
+          "id": 1981,
+          "type": 1,
+          "parentId": 30463,
+          "menuType": "MS",
+          "txtId": 1427,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2067": {
+          "id": 2067,
+          "type": 1,
+          "parentId": 30463,
+          "menuType": "MS",
+          "txtId": 740,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2066": {
+          "id": 2066,
+          "type": 1,
+          "parentId": 30463,
+          "menuType": "MS",
+          "txtId": 68,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2084": {
+          "id": 2084,
+          "type": 1,
+          "parentId": 30463,
+          "menuType": "MS",
+          "txtId": 739,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "2083": {
+          "id": 2083,
+          "type": 1,
+          "parentId": 30463,
+          "menuType": "MS",
+          "txtId": 738,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "30472": {
+          "id": 30472,
+          "type": 0,
+          "parentId": 0,
+          "menuType": "MS",
+          "txtId": 246,
+          "access": true,
+          "duringChange": "f",
+          "params": {}
+        },
+        "3633": {
+          "id": 3633,
+          "type": 1,
+          "parentId": 30472,
+          "menuType": "MS",
+          "txtId": 741,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 1,
+            "value": 0
+          }
+        },
+        "3635": {
+          "id": 3635,
+          "type": 3,
+          "parentId": 30472,
+          "menuType": "MS",
+          "txtId": 135,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "3636": {
+          "id": 3636,
+          "type": 3,
+          "parentId": 30472,
+          "menuType": "MS",
+          "txtId": 378,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "format": 3,
+            "value": 0
+          }
+        },
+        "2088": {
+          "id": 2088,
+          "type": 11,
+          "parentId": 0,
+          "menuType": "MS",
+          "txtId": 1047,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "options": [
+              {
+                "txtId": 2980,
+                "value": 1
+              },
+              {
+                "txtId": 1702,
+                "value": 0
+              }
+            ],
+            "value": 1
+          }
+        },
+        "262": {
+          "id": 262,
+          "type": 20,
+          "parentId": 0,
+          "menuType": "MS",
+          "txtId": 839,
+          "access": true,
+          "duringChange": "f",
+          "params": {
+            "type": 1,
+            "value": -1
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "title": "DEFRO eModul — read only",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect eModul",
+        "description": "Sign in to the account that contains your DEFRO controller. Your password is used only to create a session and is not stored by this integration.",
+        "data": {
+          "site": "Account domain",
+          "username": "Username or email",
+          "password": "Password"
+        }
+      },
+      "module": {
+        "title": "Select DEFRO controller",
+        "description": "Creates 317 read-only entities for the ST-9730 catalogue. Enter known menu codes if needed; protected entries remain unavailable without access.",
+        "data": {
+          "module_udid": "Controller",
+          "user_code": "User menu code MU",
+          "installer_code": "Installer menu code MI",
+          "service_code": "Service menu code MS"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Sign in to eModul again",
+        "description": "Sign in with access to the same controller. Existing entities and history are preserved.",
+        "data": {
+          "username": "Username or email",
+          "password": "Password"
+        }
+      },
+      "reconfigure": {
+        "title": "Menu access",
+        "description": "Enter known menu codes. Empty fields remove stored codes. This changes read access only.",
+        "data": {
+          "user_code": "User menu code MU",
+          "installer_code": "Installer menu code MI",
+          "service_code": "Service menu code MS"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid credentials or expired session.",
+      "cannot_connect": "Unable to read eModul.",
+      "rate_limit": "eModul rate limit reached. Try later.",
+      "module_missing": "Controller not available.",
+      "wrong_account": "This account cannot access the configured controller.",
+      "unsupported_model": "This catalogue supports DEFRO ST-9730.",
+      "invalid_code_format": "Enter 1–16 digits or leave empty.",
+      "invalid_code": "Menu code was not accepted."
+    },
+    "abort": {
+      "already_configured": "Controller already configured.",
+      "no_supported_module": "No supported pellet DEFRO controller found.",
+      "session_missing": "Restart the configuration flow.",
+      "unique_id_mismatch": "Controller does not match the existing configuration."
+    }
+  }
+}
