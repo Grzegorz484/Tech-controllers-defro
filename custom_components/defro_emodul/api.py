@@ -1,4 +1,4 @@
-"""Small eModuł client: authentication POST and allowlisted GETs only."""
+"""Small eModuł client with explicit menu-write endpoints."""
 
 from __future__ import annotations
 
@@ -64,7 +64,7 @@ def _locked(elements: list[dict[str, Any]]) -> bool:
     return any(
         item.get("id") == 0
         and isinstance(item.get("params"), dict)
-        and bool(item["params"].get("password"))
+        and item["params"].get("password") in ("password", True)
         for item in elements
     )
 
@@ -98,6 +98,7 @@ class EmodulApi:
         authentication: Authentication | None = None,
         menu_codes: dict[str, str] | None = None,
         fallback_texts: dict[str, str] | None = None,
+        menu_item_codes: dict[str, dict[str, str]] | None = None,
     ) -> None:
         if site not in SITES:
             raise ApiError("invalid_site")
@@ -105,17 +106,18 @@ class EmodulApi:
         self.site = site
         self.authentication = authentication
         self.menu_codes = dict(menu_codes or {})
+        self.menu_item_codes = {s: dict(codes) for s, codes in (menu_item_codes or {}).items()}
         self._texts = dict(fallback_texts or {})
         self._last_translation_attempt = -float("inf")
         self._menu_cache: dict[str, tuple[float, dict[str, Any]]] = {}
 
     async def _request(self, method: str, path: str, body: dict[str, Any] | None = None) -> Any:
-        # Deliberately no setpoint, alarm acknowledgement or forced-sync method.
-        if method != "GET" and not (method == "POST" and path == "/authentication"):
+        write_path = re.fullmatch(r"/users/[0-9]+/modules/[A-Za-z0-9_-]+/menu/(MU|MI|MS|MP)/ido/[0-9]+", path)
+        if method != "GET" and not (method == "POST" and (path == "/authentication" or write_path)):
             raise ApiError("write_blocked")
         if not path.startswith("/") or "://" in path or ".." in path:
             raise ApiError("invalid_path")
-        headers = {"Accept": "application/json", "User-Agent": "defro-emodul-readonly/" + VERSION}
+        headers = {"Accept": "application/json", "User-Agent": "defro-emodul/" + VERSION}
         if self.authentication and path != "/authentication":
             headers["Authorization"] = "Bearer " + self.authentication.token
         try:
@@ -165,6 +167,59 @@ class EmodulApi:
         self.authentication = Authentication(identifier, token)
         return self.authentication
 
+    async def async_set_menu(self, udid: str, section: str, element_id: int, payload: dict[str, Any]) -> None:
+        """Send one validated menu change, without automatic POST retries."""
+        if section not in MENU_TYPES or type(element_id) is not int or element_id < 0:
+            raise ApiError("write_blocked")
+        if len(payload) != 1 and set(payload) != {"value", "type"}:
+            raise ApiError("write_blocked")
+        if not set(payload) <= {"value", "type", "weekly_plus_minus", "weekly_on_off", "many_of_many", "heating_curve"}:
+            raise ApiError("write_blocked")
+        data = dict(payload)
+        if code := self._write_pin(section, element_id):
+            data["pin"] = code
+        path = self._user_prefix() + "/modules/" + _segment(udid) + "/menu/" + section + "/ido/" + str(element_id)
+        result = await self._request("POST", path, data)
+        if not isinstance(result, dict) or result.get("status") != "success" or result.get("data") not in ("1", 1) or result.get("error"):
+            raise ApiError("write_rejected")
+        self._menu_cache.pop(section, None)
+
+    def _write_pin(self, section: str, element_id: int) -> str | None:
+        elements = self._menu_cache.get(section, (0, {}))[1].get("elements", {})
+        current, seen = elements.get(element_id), set()
+        while isinstance(current, dict) and current.get("id") not in seen:
+            seen.add(current.get("id"))
+            if code := self.menu_item_codes.get(section, {}).get(str(current.get("id"))):
+                return code
+            parent = current.get("parentId")
+            if parent == current.get("id"):
+                break
+            current = elements.get(parent)
+        return self.menu_codes.get(section)
+
+    async def async_unlock_menu(self, udid: str, section: str, element_id: int, code: str) -> None:
+        """Try one explicitly supplied code; restore previous access on rejection."""
+        if section not in MENU_TYPES or type(element_id) is not int or element_id < 0 or not isinstance(code, str) or not re.fullmatch(r"[0-9]{1,16}", code):
+            raise ApiError("invalid_code")
+        root_before = dict(self.menu_codes)
+        items_before = {s: dict(c) for s, c in self.menu_item_codes.items()}
+        if element_id == 0:
+            self.menu_codes[section] = code
+        else:
+            self.menu_item_codes.setdefault(section, {})[str(element_id)] = code
+        try:
+            result = await self.async_menu(udid, section)
+            node = result.get("elements", {}).get(element_id, {})
+            params = node.get("params", {})
+            if result["status"] == "error":
+                raise ApiError("cannot_connect")
+            if result["status"] != "ok" or (element_id != 0 and (not isinstance(params, dict) or params.get("password") in ("password", True) or not node)):
+                raise ApiError("invalid_code")
+        except ApiError:
+            self.menu_codes, self.menu_item_codes = root_before, items_before
+            raise
+        self._menu_cache.pop(section, None)
+
     def _user_prefix(self) -> str:
         if self.authentication is None:
             raise AuthError("invalid_auth")
@@ -190,13 +245,16 @@ class EmodulApi:
             elements = elements_from(result)
             if elements is None:
                 return {"status": "no_elements", "elements": {}}
-            if _locked(elements):
-                code = self.menu_codes.get(menu_type)
-                if not code:
+            codes = dict(self.menu_item_codes.get(menu_type, {}))
+            if root_code := self.menu_codes.get(menu_type):
+                codes["0"] = root_code
+            if _locked(elements) or codes:
+                if not codes:
                     return {"status": "locked", "elements": {}}
-                if not code.isdecimal() or len(code) > 16:
+                if any(not re.fullmatch(r"[0-9]{1,16}", str(c)) or not str(i).isdecimal() for i, c in codes.items()):
                     return {"status": "invalid_code", "elements": {}}
-                result = await self._request("GET", path + "0:" + quote(code, safe=""))
+                pins = ",".join(str(i) + ":" + str(c) for i, c in sorted(codes.items(), key=lambda pair: int(pair[0])))
+                result = await self._request("GET", path + pins)
                 elements = elements_from(result)
                 if elements is None or _locked(elements):
                     return {"status": "invalid_code", "elements": {}}

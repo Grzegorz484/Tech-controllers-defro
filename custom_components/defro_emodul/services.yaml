@@ -1,0 +1,56 @@
+get_controls:
+  name: Pobierz menu i odczyty
+  description: Zwraca bieżące menu i odczyty dla panelu DEFRO. Wymaga administratora HA.
+  fields:
+    entry_id:
+      name: Wpis integracji
+      selector:
+        config_entry:
+          integration: defro_emodul
+set_parameter:
+  name: Zmień ustawienie menu
+  description: Zapisuje ustawienie po sprawdzeniu bieżących uprawnień, opcji i zakresu. Wymaga administratora HA.
+  fields:
+    entry_id:
+      name: Wpis integracji
+      required: true
+      selector:
+        config_entry:
+          integration: defro_emodul
+    key:
+      name: Klucz ustawienia z panelu DEFRO
+      required: true
+      selector:
+        text:
+    value:
+      name: Wartość lub lista wartości
+      required: true
+      selector:
+        object:
+    confirm:
+      name: Potwierdzenie czynności
+      default: false
+      selector:
+        boolean:
+unlock_menu:
+  name: Odblokuj menu
+  description: Sprawdź jeden znany kod menu lub podmenu i zapisz go lokalnie po przyjęciu przez eModuł.
+  fields:
+    entry_id:
+      name: Integracja
+      required: true
+      selector:
+        config_entry:
+          integration: defro_emodul
+    key:
+      name: Klucz pozycji chronionej
+      required: true
+      example: ms_0
+      selector:
+        text:
+    code:
+      name: Znany kod
+      required: true
+      selector:
+        text:
+          type: password

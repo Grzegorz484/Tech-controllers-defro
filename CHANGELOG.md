@@ -1,5 +1,14 @@
 # Zmiany
 
+## 1.1.0 — 2026-10-24
+
+- Encje `number`, `select` i `switch` dla nastaw udostępnianych na żywo przez sterownik.
+- Panel menu MU/MI/MS/MP z wyszukiwaniem i ikonami funkcji kotła.
+- Edycja harmonogramów korekt, harmonogramów włącz/wyłącz i krzywych grzewczych.
+- Wielokrotne wybory, osobne potwierdzanie czynności i obsługa znanych kodów podmenu.
+- Sprawdzanie bieżących uprawnień i granic przed każdym pojedynczym zapisem.
+- Potwierdzanie zmiany odczytem; zachowane identyfikatory 317 dotychczasowych encji odczytu.
+
 ## 1.0.0 — 2026-10-24
 
 - 317 encji odczytu dla DEFRO APC Slim / ST-9730.

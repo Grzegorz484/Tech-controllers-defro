@@ -29,4 +29,8 @@ jobs:
         run: python -m ruff check --select E9,F custom_components install.py scripts
       - name: Tests
         run: python -m pytest -q --tb=short --show-capture=no
+      - name: Card syntax and behavior
+        run: |
+          node --check custom_components/defro_emodul/www/defro-emodul-card.js
+          node --test tests/frontend.test.cjs
 

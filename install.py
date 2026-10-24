@@ -76,7 +76,7 @@ def main():
         print('Kopia poprzedniej wersji: ' + str(backup))
     print('\nTeraz w Home Assistant:')
     print('1. Uruchom ponownie Home Assistant.')
-    print('2. Ustawienia > Urządzenia i usługi > Dodaj integrację > DEFRO eModuł — odczyt.')
+    print('2. Ustawienia > Urządzenia i usługi > Dodaj integrację > DEFRO eModuł.')
     print('3. Zaloguj się do eModułu i wybierz swój sterownik. Encje powstaną automatycznie.')
     return 0
 

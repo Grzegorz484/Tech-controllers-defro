@@ -7,6 +7,7 @@ from homeassistant.helpers.update_coordinator import CoordinatorEntity
 from .const import DOMAIN
 from .coordinator import DefroCoordinator
 from .model import Reading, read_entity
+from .icons import icon_for
 
 
 class DefroEntity(CoordinatorEntity[DefroCoordinator]):
@@ -18,6 +19,7 @@ class DefroEntity(CoordinatorEntity[DefroCoordinator]):
         super().__init__(coordinator)
         self.spec = spec
         self._attr_name = spec["name"]
+        self._attr_icon = icon_for(spec["name"], spec.get("unit"))
         self._attr_unique_id = coordinator.udid + ":" + spec["key"]
         self._attr_device_info = DeviceInfo(
             identifiers={(DOMAIN, coordinator.udid)},

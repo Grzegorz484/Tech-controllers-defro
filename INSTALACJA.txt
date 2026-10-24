@@ -1,67 +1,52 @@
-DEFRO eModuł — odczyt dla Home Assistant
+DEFRO eModuł 1.1.0 — odczyty, sterowanie i panel menu
 
-1. Rozpakuj cały ZIP.
-2. Wgraj folder custom_components/defro_emodul do folderu konfiguracji HA,
-   tak aby manifest był pod ścieżką:
-   /config/custom_components/defro_emodul/manifest.json
-   W instalacji Docker użyj folderu hosta zamontowanego jako /config.
+AKTUALIZACJA
+HACS > Tech-controllers-defro > menu > Pobierz ponownie (lub Aktualizuj).
+Uruchom ponownie HA, a następnie odśwież przeglądarkę.
+Dotychczasowy wpis integracji i identyfikatory 317 encji odczytu zostają zachowane.
+Nowe encje sterowania są widoczne w części konfiguracji urządzenia DEFRO.
 
-   Jeśli masz ten folder udostępniony na swoim Windows, uruchom
-   ZAINSTALUJ_WINDOWS.cmd i wskaż go w oknie wyboru.
-   Wybierz prawdziwy folder HA z configuration.yaml, np. udział sieciowy
-   udostępniony przez Twoją instalację. Zwykły folder Pobrane nie wystarczy.
-   Instalator kopiuje wyłącznie tę integrację i zachowuje poprzednią wersję.
-   Jeżeli folder HA nie jest dostępny z komputera, wgraj pliki przez swój
-   istniejący dostęp do plików HA (np. udział sieciowy lub SFTP).
+PANEL Z IKONAMI
+Edytuj pulpit > Dodaj kartę > Ręcznie:
 
-3. Uruchom ponownie Home Assistant.
-4. Ustawienia > Urządzenia i usługi > Dodaj integrację.
-5. Wyszukaj „DEFRO eModuł — odczyt”.
-6. Wybierz emodul.pl (domena z Twojego eksportu), wpisz login i hasło.
-7. Wybierz DEFRO. Jeżeli w eModuł używasz kodu menu, wpisz znany kod.
-   Pozostałe pola pozostaw puste. Wszystkie 317 encji z katalogu zostaną
-   zarejestrowane automatycznie: 261 sensor i 56 binary_sensor.
+type: custom:defro-emodul-card
+title: DEFRO eModuł
 
-Po instalacji
-Otwórz urządzenie DEFRO na stronie integracji, aby zobaczyć encje.
-Encje mają odczyty na żywo z eModułu. Kafelki aktualizują się co 60 sekund,
-parametry menu co 300 sekund. Początkowe wartości są pobierane z serwera.
-Paczka nie zawiera zapisanych temperatur do odtwarzania jako bieżące pomiary.
+Zaloguj się jako administrator HA. Jeśli karta się nie pojawi, odśwież stronę.
+W Ustawienia > Pulpity > menu > Zasoby dodaj moduł JavaScript:
+/defro_emodul_static/defro-emodul-card.js?v=1.1.0
+Pełna instrukcja, także dla zasobów YAML, znajduje się w README.md.
 
-Status „niedostępny”
-Dotyczy braku danych, wyłączonej/niedostępnej gałęzi, braku uprawnień menu,
-odłączonego sterownika lub trwającej zmiany ustawienia po stronie eModułu.
-317 jest liczbą zarejestrowanych encji. Nie oznacza 317 aktywnych urządzeń.
-W razie problemu: menu integracji > Pobierz diagnostykę. Plik diagnostyczny
-pomija token, login, hasło, identyfikator sterownika i podane kody menu.
+PIERWSZA INSTALACJA RĘCZNA
+1. Rozpakuj ZIP. Skopiuj cały folder custom_components/defro_emodul do HA.
+   Manifest powinien być pod /config/custom_components/defro_emodul/manifest.json.
+   W Docker użyj folderu hosta zamontowanego jako /config.
+2. Opcjonalnie uruchom ZAINSTALUJ_WINDOWS.cmd i wskaż dostępny folder HA
+   z configuration.yaml, np. istniejący udział sieciowy. Instalator zachowuje
+   poprzednią wersję integracji i nie zmienia configuration.yaml.
+3. Uruchom ponownie HA.
+4. Ustawienia > Urządzenia i usługi > Dodaj integrację > DEFRO eModuł.
+5. Podaj swoją domenę konta, login i hasło, wybierz sterownik oraz znane kody menu.
+6. Dodaj kartę panelu według instrukcji powyżej.
 
-Zmiana kodów menu
-Menu ⋮ integracji > Zmień konfigurację (Reconfigure).
-Wpisz znane kody lub usuń je, zostawiając puste pole. Nastawy kotła pozostają
-bez zmian. Po wygaśnięciu tokenu HA pokaże formularz ponownego logowania.
-Ponowne logowanie zachowuje encje i ich historię.
+OBSŁUGA
+Panel zawiera menu zwracane przez API, harmonogramy, krzywe grzewcze i ikony.
+Wartości zmieniasz przyciskiem Zapisz. Czynności wymagają osobnego potwierdzenia.
+Encje number, select i switch można także dodać do zwykłych kart HA i automatyzacji.
+Przed każdą zmianą integracja sprawdza aktualny dostęp i zakres nastawy.
+Przyjęcie polecenia przez eModuł jest potwierdzane późniejszym odczytem sterownika.
+Kafelki odświeżają się co 60 sekund, menu standardowo co 300 sekund.
 
-Zakres
-To integracja odczytu, przygotowana dla Twojego DEFRO ST-9730 na podstawie
-eksportu z 24.10.2026. Obsługuje pomiary, stany urządzeń, odczyt nastaw,
-punkty krzywych i surowe dane harmonogramów. Przy harmonogramach korekt
-stanem jest liczba punktów, a ich lista jest w atrybucie values.
-Nie tworzy przycisków rozpalania, wygaszania ani resetu ustawień.
-Bieżącej temperatury CWU nie ma w dostarczonym eksporcie, dlatego nie jest
-zastępowana nastawą 50°C. Niepotwierdzone jednostki pozostają surowe.
+KODY I LOGOWANIE
+Kody głównych menu: menu integracji > Zmień konfigurację.
+Znany kod podmenu: pole przy chronionej pozycji w panelu.
+Integracja respektuje uprawnienia konta; nieaktywne i zablokowane pozycje
+pozostają niedostępne. Nieznane typy elementów są widoczne, ale bez zapisu.
+Hasło konta nie jest zapisywane. Token i podane kody zostają w lokalnej konfiguracji HA.
+Po wygaśnięciu sesji użyj formularza ponownego logowania, aby zachować historię.
+Diagnostyka integracji pomija hasła, kody, tokeny i identyfikator modułu.
 
-Logowanie
-Hasło podajesz bezpośrednio w formularzu Twojego HA. Integracja zachowuje
-token sesji oraz podane kody menu w konfiguracji HA; hasło konta nie jest
-zachowywane. Logowanie korzysta z HTTPS do wybranej domeny eModułu.
-Do pracy potrzebne jest połączenie z chmurą eModułu.
-
-Usunięcie
-Usuń wpis integracji przez Ustawienia > Urządzenia i usługi.
-Następnie usuń folder /config/custom_components/defro_emodul i uruchom
-ponownie Home Assistant. Pozostałe integracje nie są modyfikowane.
-
-Ta paczka została przygotowana i sprawdzona lokalnie. Nie jest jeszcze
-zainstalowana na Twoim Home Assistant — potrzebne jest wgranie plików
-i logowanie wykonane na Twojej instalacji.
-
+WERYFIKACJA
+Odczyty i zapisy zostały sprawdzone automatycznie na danych syntetycznych
+w frameworku HA. Nie wykonano zdalnego zapisu do Twojego fizycznego kotła.
+Repozytorium: https://github.com/Grzegorz484/Tech-controllers-defro

@@ -17,7 +17,7 @@ from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers import selector
 
 from .api import ApiError, AuthError, Authentication, EmodulApi, RateLimitError
-from .const import CODE_FIELDS, CONF_MENU_CODES, CONF_MODULE_UDID, CONF_SITE, CONF_USER_ID, DOMAIN, SITES
+from .const import CODE_FIELDS, CONF_MENU_CODES, CONF_MENU_ITEM_CODES, CONF_MODULE_UDID, CONF_SITE, CONF_USER_ID, DOMAIN, SITES
 
 
 def _password_selector():
@@ -192,6 +192,11 @@ class DefroConfigFlow(ConfigFlow, domain=DOMAIN):
                 if not errors:
                     await self.async_set_unique_id(str(entry.data[CONF_MODULE_UDID]))
                     self._abort_if_unique_id_mismatch()
-                    return self.async_update_reload_and_abort(entry, data_updates={CONF_MENU_CODES: codes})
-        return self.async_show_form(step_id="reconfigure", data_schema=vol.Schema(_code_fields(current)), errors=errors)
+                    updates = {CONF_MENU_CODES: codes}
+                    if user_input.get("clear_submenu_codes"):
+                        updates[CONF_MENU_ITEM_CODES] = {}
+                    return self.async_update_reload_and_abort(entry, data_updates=updates)
+        return self.async_show_form(step_id="reconfigure", data_schema=vol.Schema({
+            **_code_fields(current), vol.Optional("clear_submenu_codes", default=False): bool,
+        }), errors=errors)
 

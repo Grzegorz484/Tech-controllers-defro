@@ -26,6 +26,9 @@ def check(root, require_hacs=False):
         raise ValueError('Nieprawidłowa domena lub katalog encji.')
     if not (component / 'brand/icon.png').is_file():
         raise ValueError('Brak ikony integracji.')
+    for name in ('number.py','select.py','switch.py','services.yaml','www/defro-emodul-card.js','THIRD_PARTY_NOTICES.md'):
+        if not (component / name).is_file():
+            raise ValueError('Brak zasobu sterowania: ' + name)
     ready = bool(manifest.get('issue_tracker') and manifest.get('codeowners') and manifest.get('documentation', '').startswith('https://github.com/'))
     if require_hacs and not ready:
         raise ValueError('Uzupełnij metadane poleceniem scripts/configure_repository.py --repository LOGIN/tech-controllers-defro.')

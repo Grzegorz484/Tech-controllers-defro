@@ -1,5 +1,5 @@
 {
-  "title": "DEFRO eModuł — odczyt",
+  "title": "DEFRO eModuł",
   "config": {
     "step": {
       "user": {
@@ -13,12 +13,13 @@
       },
       "module": {
         "title": "Wybierz sterownik DEFRO",
-        "description": "Powstanie 317 encji odczytu dla ST-9730. Kody menu są opcjonalne. Wpisz znane Ci kody, jeśli używasz ich w eModuł; bez kodu chronione pozycje będą niedostępne.",
+        "description": "Tworzy 317 encji odczytu oraz encje sterowania i panel menu ST-9730. Wpisz znane kody menu, jeśli są wymagane w eModuł.",
         "data": {
           "module_udid": "Sterownik",
           "user_code": "Kod menu użytkownika MU",
           "installer_code": "Kod menu instalatora MI",
-          "service_code": "Kod menu serwisowego MS"
+          "service_code": "Kod menu serwisowego MS",
+          "manufacturer_code": "Kod menu producenta MP"
         }
       },
       "reauth_confirm": {
@@ -31,11 +32,13 @@
       },
       "reconfigure": {
         "title": "Dostęp do menu",
-        "description": "Wpisz znane kody menu. Puste pole usuwa zapisany kod. Zmiana dotyczy dostępu do odczytu i nie zmienia nastaw kotła.",
+        "description": "Wpisz znane kody głównych menu. Puste pole usuwa zapisany kod główny. Kody podmenu dodane w panelu pozostają zapisane. Samo podanie kodu nie zmienia nastaw kotła.",
         "data": {
           "user_code": "Kod menu użytkownika MU",
           "installer_code": "Kod menu instalatora MI",
-          "service_code": "Kod menu serwisowego MS"
+          "service_code": "Kod menu serwisowego MS",
+          "manufacturer_code": "Kod menu producenta MP",
+          "clear_submenu_codes": "Usuń zapisane kody podmenu"
         }
       }
     },

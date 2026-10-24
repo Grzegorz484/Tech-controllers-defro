@@ -1,5 +1,5 @@
 {
-  "title": "DEFRO eModul — read only",
+  "title": "DEFRO eModul",
   "config": {
     "step": {
       "user": {
@@ -13,12 +13,13 @@
       },
       "module": {
         "title": "Select DEFRO controller",
-        "description": "Creates 317 read-only entities for the ST-9730 catalogue. Enter known menu codes if needed; protected entries remain unavailable without access.",
+        "description": "Creates 317 reading entities plus live controls and the ST-9730 menu card. Enter known menu codes when required by eModul.",
         "data": {
           "module_udid": "Controller",
           "user_code": "User menu code MU",
           "installer_code": "Installer menu code MI",
-          "service_code": "Service menu code MS"
+          "service_code": "Service menu code MS",
+          "manufacturer_code": "Manufacturer menu code MP"
         }
       },
       "reauth_confirm": {
@@ -31,11 +32,13 @@
       },
       "reconfigure": {
         "title": "Menu access",
-        "description": "Enter known menu codes. Empty fields remove stored codes. This changes read access only.",
+        "description": "Enter known main menu codes. Empty fields remove stored main codes. Submenu codes added in the card are retained. Entering a code does not change boiler settings.",
         "data": {
           "user_code": "User menu code MU",
           "installer_code": "Installer menu code MI",
-          "service_code": "Service menu code MS"
+          "service_code": "Service menu code MS",
+          "manufacturer_code": "Manufacturer menu code MP",
+          "clear_submenu_codes": "Clear stored submenu codes"
         }
       }
     },

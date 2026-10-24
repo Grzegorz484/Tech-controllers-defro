@@ -1,4 +1,4 @@
-"""DEFRO eModuł, read-only entities for the supplied ST-9730 catalogue."""
+"""DEFRO eModuł monitoring and live menu controls."""
 
 import json
 from pathlib import Path
@@ -10,10 +10,12 @@ from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers import config_validation as cv
 
 from .api import Authentication, EmodulApi
-from .const import CONF_MENU_CODES, CONF_SITE, CONF_USER_ID, DOMAIN
+from .const import CONF_MENU_CODES, CONF_MENU_ITEM_CODES, CONF_SITE, CONF_USER_ID, DOMAIN
 from .coordinator import DefroCoordinator
+from .services import async_setup_services
+from .frontend import async_setup_ui
 
-PLATFORMS = [Platform.SENSOR, Platform.BINARY_SENSOR]
+PLATFORMS = [Platform.SENSOR, Platform.BINARY_SENSOR, Platform.NUMBER, Platform.SELECT, Platform.SWITCH]
 CONFIG_SCHEMA = cv.config_entry_only_config_schema(DOMAIN)
 
 
@@ -28,11 +30,14 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         async_get_clientsession(hass), entry.data[CONF_SITE],
         Authentication(str(entry.data[CONF_USER_ID]), entry.data[CONF_TOKEN]),
         menu_codes=entry.data.get(CONF_MENU_CODES, {}),
+        menu_item_codes=entry.data.get(CONF_MENU_ITEM_CODES, {}),
         fallback_texts=catalogue.get("texts", {}),
     )
     coordinator = DefroCoordinator(hass, entry, api, catalogue)
     await coordinator.async_config_entry_first_refresh()
     entry.runtime_data = coordinator
+    async_setup_services(hass)
+    await async_setup_ui(hass)
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
     return True
 
