@@ -5,6 +5,7 @@ import voluptuous as vol
 from homeassistant.core import SupportsResponse
 from homeassistant.config_entries import ConfigEntryState
 from homeassistant.exceptions import HomeAssistantError
+from homeassistant.helpers import entity_registry as er
 from homeassistant.helpers.service import async_register_admin_service
 
 from .const import DOMAIN
@@ -22,6 +23,7 @@ def async_setup_services(hass):
 
     async def get_controls(call):
         controllers = []
+        registry = er.async_get(hass)
         for entry in entries(call.data.get("entry_id")):
             co = entry.runtime_data
             tiles = []
@@ -30,6 +32,7 @@ def async_setup_services(hass):
                     continue
                 reading = read_entity(spec, co.data)
                 tiles.append({"key": spec["key"], "name": spec["name"], "unit": spec.get("unit"),
+                              "entity_id": registry.async_get_entity_id(spec["platform"], DOMAIN, co.udid + ":" + spec["key"]),
                               "value": reading.value if reading.available and co.last_update_success else None,
                               "icon": icon_for(spec["name"], spec.get("unit"))})
             controls = [{**i, "warning": co.write_errors.get(i["key"])}

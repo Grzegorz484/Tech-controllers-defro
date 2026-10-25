@@ -1,7 +1,7 @@
 {
   "domain": "defro_emodul",
   "name": "DEFRO eModuł",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "documentation": "https://github.com/Grzegorz484/Tech-controllers-defro",
   "codeowners": [
     "@Grzegorz484"

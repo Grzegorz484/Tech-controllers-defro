@@ -1,7 +1,8 @@
 # tech-controllers-defro
 
 Integracja **DEFRO APC Slim / ST-9730** z Home Assistant przez eModuł.
-Wersja **1.1.0** dodaje sterowanie i panel menu z ikonami funkcji kotła.
+Wersja **1.1.1** otwiera z kafelków standardowe okno Home Assistant z historią encji.
+Integracja zawiera sterowanie i panel menu z ikonami funkcji kotła.
 Zachowuje identyfikatory **317 encji odczytu**: 261 `sensor` i 56 `binary_sensor`.
 
 ## Sterowanie
@@ -31,7 +32,7 @@ odczytem: ustawienie oczekuje na aktualizację; brak potwierdzenia powoduje ostr
 Czynności takie jak rozpalanie, wygaszanie lub przywrócenie ustawień są dostępne
 w panelu, jeśli udostępnia je sterownik, i wymagają dodatkowego potwierdzenia.
 
-## Aktualizacja z 1.0.0
+## Aktualizacja z 1.0.0 lub 1.1.0
 
 1. W HACS otwórz **Tech-controllers-defro → menu ⋮ → Pobierz ponownie**
    (lub Aktualizuj, jeśli HACS wyświetla aktualizację).
@@ -39,6 +40,7 @@ w panelu, jeśli udostępnia je sterownik, i wymagają dodatkowego potwierdzenia
 3. Odśwież stronę HA. Encje sterowania znajdziesz przy urządzeniu DEFRO
    w części konfiguracji; mogą mieć osobne nazwy obok sensorów odczytu.
 4. Dodaj kartę menu do pulpitu zgodnie z następną sekcją.
+   Jeżeli karta jest już dodana, kliknij kafelek temperatury, aby otworzyć historię HA.
 
 ## Panel menu z ikonami
 
@@ -59,7 +61,7 @@ Jeżeli HA pokazuje „Custom element doesn't exist”, odśwież stronę i spra
 **Ustawienia → Pulpity → menu ⋮ → Zasoby**. Dodaj zasób typu **Moduł JavaScript**:
 
 ```text
-/defro_emodul_static/defro-emodul-card.js?v=1.1.0
+/defro_emodul_static/defro-emodul-card.js?v=1.1.1
 ```
 
 W trybie zasobów YAML wpisz go ręcznie w konfiguracji Lovelace:
@@ -67,9 +69,21 @@ W trybie zasobów YAML wpisz go ręcznie w konfiguracji Lovelace:
 ```yaml
 lovelace:
   resources:
-    - url: /defro_emodul_static/defro-emodul-card.js?v=1.1.0
+    - url: /defro_emodul_static/defro-emodul-card.js?v=1.1.1
       type: module
 ```
+
+### Historia po kliknięciu kafelka
+
+Kliknięcie kafelka w zakładce **Podgląd** otwiera standardowe okno szczegółów
+tej samej encji Home Assistant, które jest dostępne na stronie urządzenia.
+Temperatury pokazują wykres, a stany pomp i pozostałe encje swoją historię
+zgodnie z danymi zapisanymi przez HA. Kafelki obsługują również klawisze Enter i spację.
+
+Powiązanie korzysta z rejestru encji, więc uwzględnia zmienione przez użytkownika
+identyfikatory i właściwy sterownik. Historia pochodzi z `recorder` Home Assistant;
+integracja zachowuje istniejące encje i ich wcześniejsze dane. Nawet gdy bieżący
+odczyt jest niedostępny, kafelek nadal otwiera szczegóły zarejestrowanej encji.
 
 ## Pierwsza instalacja
 

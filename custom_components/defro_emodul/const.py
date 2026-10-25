@@ -2,7 +2,7 @@
 
 DOMAIN = "defro_emodul"
 NAME = "DEFRO eModuł"
-VERSION = "1.1.0"
+VERSION = "1.1.1"
 CONF_SITE = "site"
 CONF_USER_ID = "user_id"
 CONF_MODULE_UDID = "module_udid"

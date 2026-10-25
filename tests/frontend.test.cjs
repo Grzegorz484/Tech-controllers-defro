@@ -18,6 +18,7 @@ function setup() {
   }
   const context = vm.createContext({
     HTMLElement: Element,
+    CustomEvent,
     window: {confirm: () => true, setInterval: () => 1, clearInterval() {}},
     customElements: {get: (name) => registry.get(name), define: (name, value) => registry.set(name, value)},
   });
@@ -95,6 +96,45 @@ test('reading the panel never sends a boiler command', async () => {
   assert.equal(calls.length, 1);
   assert.equal(calls[0][1].service, 'get_controls');
   assert.equal(calls[0][1].return_response, true);
+});
+
+test('overview tiles link to the actual HA entity, including renamed sensors', () => {
+  const {card} = setup();
+  const html = card._overview({tiles: [{entity_id:'sensor.moja_temperatura_kotla',
+    name:'Temperatura CO',value:55.1,unit:'°C',icon:'mdi:radiator'}]});
+  assert.match(html, /<button type="button" class="tile" data-action="more-info"/);
+  assert.match(html, /data-entity-id="sensor.moja_temperatura_kotla"/);
+  assert.match(html, /55\.1/);
+  assert.match(html, /historię i szczegóły/);
+});
+
+test('clicking a tile opens native HA more-info without a boiler command', () => {
+  const {card} = setup();
+  const calls = configure(card, {key:'mu_1'});
+  const events = [];
+  card.dispatchEvent = (event) => events.push(event);
+  const button = {disabled:false,dataset:{action:'more-info',entityId:'sensor.moja_temperatura_kotla'}};
+  card._click({target:{closest:(selector)=>selector==='button[data-action]' ? button : null}});
+  assert.equal(events.length, 1);
+  assert.equal(events[0].type, 'hass-more-info');
+  assert.equal(events[0].detail.entityId, 'sensor.moja_temperatura_kotla');
+  assert.equal(events[0].bubbles, true);
+  assert.equal(events[0].composed, true);
+  assert.equal(calls.length, 0);
+});
+
+test('unavailable readings keep history links, missing registry entities are disabled', () => {
+  const {card} = setup();
+  const offline = card._tile({entity_id:'binary_sensor.pompa_co',name:'Pompa CO',value:null});
+  assert.doesNotMatch(offline, /\sdisabled(?:\s|>)/);
+  assert.match(offline, /data-entity-id="binary_sensor.pompa_co"/);
+  const missing = card._tile({entity_id:null,name:'Brak encji',value:null});
+  assert.match(missing, /\sdisabled\s/);
+  const events = [];
+  card.dispatchEvent = (event) => events.push(event);
+  const button = {disabled:true,dataset:{action:'more-info',entityId:''}};
+  card._click({target:{closest:(selector)=>selector==='button[data-action]' ? button : null}});
+  assert.equal(events.length, 0);
 });
 
 test('polling preserves unfinished form contents', async () => {

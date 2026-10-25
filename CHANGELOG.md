@@ -1,5 +1,12 @@
 # Zmiany
 
+## 1.1.1 — 2026-10-25
+
+- Kliknięcie kafelka otwiera standardowe okno Home Assistant z historią i szczegółami encji.
+- Powiązanie kafelków z rejestrem encji uwzględnia zmienione identyfikatory i wiele sterowników.
+- Obsługa klawiatury oraz dostęp do historii przy niedostępnym bieżącym odczycie.
+- Odświeżenie wersji zasobu karty przy aktualizacji; zachowane dotychczasowe encje i dane historii.
+
 ## 1.1.0 — 2026-10-24
 
 - Encje `number`, `select` i `switch` dla nastaw udostępnianych na żywo przez sterownik.

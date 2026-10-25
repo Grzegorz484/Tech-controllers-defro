@@ -141,6 +141,29 @@ async def setup_controller(hass,monkeypatch,snapshot):
     return item,fetch,write,entities
 
 
+async def test_panel_tiles_resolve_registered_entities_and_follow_user_renames(hass,monkeypatch,snapshot):
+    item,_,write,entities=await setup_controller(hass,monkeypatch,snapshot)
+    registry=er.async_get(hass)
+    temperature=next(e for e in entities if e.unique_id.endswith(':tile_1006_value'))
+    renamed=registry.async_update_entity(temperature.entity_id,new_entity_id='sensor.moja_temperatura_kotla')
+    await hass.async_block_till_done()
+    response=await hass.services.async_call(DOMAIN,'get_controls',{},blocking=True,return_response=True)
+    tiles=response['controllers'][0]['tiles']
+    assert next(t for t in tiles if t['key']=='tile_1006_value')['entity_id']==renamed.entity_id
+    for tile in tiles:
+        registered=registry.async_get(tile['entity_id'])
+        assert registered.config_entry_id==item.entry_id
+        assert registered.unique_id=='controller-uuid:'+tile['key']
+        assert hass.states.get(tile['entity_id']) is not None
+    assert any(t['entity_id'].startswith('binary_sensor.') for t in tiles)
+    assert hass.states.get(renamed.entity_id).attributes['state_class']=='measurement'
+    assert hass.states.get(renamed.entity_id).attributes['device_class']=='temperature'
+    item.runtime_data.last_update_success=False
+    offline=await hass.services.async_call(DOMAIN,'get_controls',{},blocking=True,return_response=True)
+    assert next(t for t in offline['controllers'][0]['tiles'] if t['key']=='tile_1006_value')['entity_id']==renamed.entity_id
+    write.assert_not_awaited()
+
+
 @pytest.mark.parametrize('key,domain,service,data,payload',[
     ('mu_2060','number','set_value',{'value':71},{'value':71}),
     ('mu_2089','number','set_value',{'value':21.7},{'value':217}),

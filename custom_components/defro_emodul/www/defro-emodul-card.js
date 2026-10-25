@@ -113,6 +113,13 @@ class DefroEmodulCard extends HTMLElement {
     }
     const button = event.target.closest("button[data-action]");
     if (!button || button.disabled) return;
+    if (button.dataset.action === "more-info") {
+      const entityId = button.dataset.entityId;
+      if (entityId) this.dispatchEvent(new CustomEvent("hass-more-info", {
+        detail: {entityId}, bubbles: true, composed: true,
+      }));
+      return;
+    }
     if (button.dataset.action === "refresh") { this._load(true); return; }
     const row = button.closest("[data-key]");
     if (!row) return;
@@ -221,8 +228,13 @@ class DefroEmodulCard extends HTMLElement {
       ${item.warning ? `<p class="warning">${e(item.warning)}</p>` : ""}
       <fieldset ${unavailable && !item.can_unlock ? "disabled" : ""}>${this._editor(item)}${!["group", "password", "unsupported"].includes(item.kind) ? `<div class="buttons"><button type="button" data-action="save" class="primary">${item.kind === "action" ? "Wykonaj…" : "Zapisz"}</button><button type="button" data-action="cancel">Cofnij zmiany formularza</button></div>` : ""}</fieldset></article>`;
   }
+  _tile(tile) {
+    const e = escapeHtml;
+    const entityId = tile.entity_id || "";
+    return `<button type="button" class="tile" data-action="more-info" data-entity-id="${e(entityId)}" ${entityId ? 'title="Historia i szczegóły w Home Assistant"' : 'disabled title="Brak encji w rejestrze Home Assistant"'}>${this._icon(tile.icon)}<span class="tile-name">${e(tile.name)}</span><strong>${tile.value == null ? "—" : e(typeof tile.value === "boolean" ? (tile.value ? "Włączone" : "Wyłączone") : tile.value)} <small>${e(tile.unit)}</small></strong></button>`;
+  }
   _overview(controller) {
-    return `<div class="tiles">${(controller?.tiles || []).map((tile) => `<div class="tile">${this._icon(tile.icon)}<div class="tile-name">${escapeHtml(tile.name)}</div><strong>${tile.value == null ? "—" : escapeHtml(typeof tile.value === "boolean" ? (tile.value ? "Włączone" : "Wyłączone") : tile.value)} <small>${escapeHtml(tile.unit)}</small></strong></div>`).join("")}</div><p class="hint">Wybierz menu powyżej, aby zmieniać nastawy. Odczyty są aktualizowane przez integrację; menu standardowo co 5 minut. Przed zapisem uprawnienia i zakres są sprawdzane ponownie.</p>`;
+    return `<div class="tiles">${(controller?.tiles || []).map((tile) => this._tile(tile)).join("")}</div><p class="hint">Kliknij kafelek, aby otworzyć historię i szczegóły encji w Home Assistant. Wybierz menu powyżej, aby zmieniać nastawy. Odczyty są aktualizowane przez integrację; menu standardowo co 5 minut. Przed zapisem uprawnienia i zakres są sprawdzane ponownie.</p>`;
   }
   _render() {
     const controller = this._controller();
@@ -248,7 +260,7 @@ class DefroEmodulCard extends HTMLElement {
     .body{padding:16px}nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}button,input,select{font:inherit}button{cursor:pointer;border:1px solid var(--divider-color,#d5dce4);border-radius:8px;padding:9px 12px;color:var(--primary-text-color,#263449);background:var(--secondary-background-color,#f5f7fa)}button:hover{filter:brightness(.96)}button:disabled{cursor:default;opacity:.5}button.active,button.primary{background:#e77e21;color:#fff;border-color:#e77e21}
     input[type=number],input[type=search],select{background:var(--card-background-color,#fff);color:inherit;border:1px solid var(--divider-color,#cbd3dd);border-radius:7px;padding:9px;min-width:0}input[type=checkbox]{width:20px;height:20px;accent-color:#e77e21;vertical-align:middle;flex-shrink:0}input[type=number]{width:110px}input[type=search]{width:min(100%,320px)}select{max-width:100%}input:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid #e77e21;outline-offset:2px}
     .filters{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:16px 0}.filters label{font-size:13px}.filters>span{font-size:12px;color:var(--secondary-text-color,#6d7580)}.status:empty{display:none}.status{padding:10px 12px;margin:10px 0;background:var(--secondary-background-color,#f1f5f8);border-radius:8px;font-size:13px}.status.error,.warning{color:var(--error-color,#b3261e)}
-    .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:16px}.tile{padding:16px 12px;border:1px solid var(--divider-color,#e0e6eb);border-radius:12px}.tile ha-icon{color:#e77e21;--mdc-icon-size:29px}.tile ha-icon[icon="mdi:water-boiler"],.tile ha-icon[icon="mdi:valve"]{color:#398dd4}.tile ha-icon[icon="mdi:pump"]{color:#43946b}.tile ha-icon[icon="mdi:fan"]{color:#7c8d9e}.tile-name{font-size:12px;color:var(--secondary-text-color,#637083);margin:9px 0}.tile strong{font-size:21px}.tile small{font-weight:400;font-size:13px}
+    .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:16px}.tile{padding:16px 12px;border:1px solid var(--divider-color,#e0e6eb);border-radius:12px;background:var(--card-background-color,#fff);color:inherit;text-align:left;min-width:0}.tile:disabled{opacity:1}.tile ha-icon{color:#e77e21;--mdc-icon-size:29px}.tile ha-icon[icon="mdi:water-boiler"],.tile ha-icon[icon="mdi:valve"]{color:#398dd4}.tile ha-icon[icon="mdi:pump"]{color:#43946b}.tile ha-icon[icon="mdi:fan"]{color:#7c8d9e}.tile-name{display:block;font-size:12px;color:var(--secondary-text-color,#637083);margin:9px 0}.tile strong{display:block;font-size:21px}.tile small{font-weight:400;font-size:13px}
     .setting{border:1px solid var(--divider-color,#dce2e8);border-radius:12px;padding:16px;margin-bottom:10px}.setting.edited{border-color:#e77e21}.setting[hidden]{display:none}.setting-head{display:flex;align-items:flex-start;gap:10px}.setting-head ha-icon{color:#e77e21;flex-shrink:0}.setting-head strong{font-size:15px}.path{font-size:11px;color:var(--secondary-text-color,#6d7580);margin-top:4px;overflow-wrap:anywhere}.reason{font-size:12px;color:var(--secondary-text-color,#6d7580);margin-top:10px}.unavailable .setting-head ha-icon{color:var(--disabled-text-color,#8b95a0)}
     fieldset{border:0;padding:0;margin:12px 0 0;min-width:0}fieldset:disabled{opacity:.6}.value-line{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.value-line small{color:var(--secondary-text-color,#6d7580);font-size:12px}.buttons{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}.buttons button:last-child{font-size:12px}.toggle,.checks label{display:flex;gap:8px;align-items:center}.checks{display:flex;gap:14px;flex-wrap:wrap}.hint{font-size:12px;line-height:1.6;color:var(--secondary-text-color,#6d7580)}
     .curve{display:flex;gap:12px;flex-wrap:wrap}.curve label{display:flex;align-items:center;gap:6px;flex-direction:column;font-size:12px}.slots{display:grid;grid-template-columns:repeat(auto-fit,minmax(74px,1fr));gap:8px;margin-top:12px}.slots label{font-size:11px;text-align:center;display:flex;align-items:center;flex-direction:column;gap:5px}.slots input[type=number]{width:100%;max-width:100px;padding:8px 4px}.slots.onoff label{border:1px solid var(--divider-color,#dce2e8);border-radius:6px;padding:8px}.slots.onoff label:has(input:checked){background:#e77e211a;border-color:#e77e21}.fill{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.fill button{font-size:12px}code{overflow-wrap:anywhere}p{line-height:1.5;font-size:13px}

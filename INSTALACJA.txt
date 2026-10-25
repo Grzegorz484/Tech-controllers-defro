@@ -1,4 +1,4 @@
-DEFRO eModuł 1.1.0 — odczyty, sterowanie i panel menu
+DEFRO eModuł 1.1.1 — odczyty, sterowanie, historia HA i panel menu
 
 AKTUALIZACJA
 HACS > Tech-controllers-defro > menu > Pobierz ponownie (lub Aktualizuj).
@@ -14,7 +14,7 @@ title: DEFRO eModuł
 
 Zaloguj się jako administrator HA. Jeśli karta się nie pojawi, odśwież stronę.
 W Ustawienia > Pulpity > menu > Zasoby dodaj moduł JavaScript:
-/defro_emodul_static/defro-emodul-card.js?v=1.1.0
+/defro_emodul_static/defro-emodul-card.js?v=1.1.1
 Pełna instrukcja, także dla zasobów YAML, znajduje się w README.md.
 
 PIERWSZA INSTALACJA RĘCZNA
