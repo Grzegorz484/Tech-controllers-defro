@@ -10,7 +10,7 @@ from homeassistant.helpers.service import async_register_admin_service
 
 from .const import DOMAIN
 from .model import read_entity
-from .icons import icon_for
+from .activity import tile_activity
 
 
 def async_setup_services(hass):
@@ -34,7 +34,7 @@ def async_setup_services(hass):
                 tiles.append({"key": spec["key"], "name": spec["name"], "unit": spec.get("unit"),
                               "entity_id": registry.async_get_entity_id(spec["platform"], DOMAIN, co.udid + ":" + spec["key"]),
                               "value": reading.value if reading.available and co.last_update_success else None,
-                              "icon": icon_for(spec["name"], spec.get("unit"))})
+                              **tile_activity(spec, co.data, last_update_success=co.last_update_success)})
             controls = [{**i, "warning": co.write_errors.get(i["key"])}
                         for i in co.controls.values() if "base_key" not in i]
             if not co.last_update_success:

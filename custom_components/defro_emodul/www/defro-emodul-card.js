@@ -4,6 +4,7 @@ const escapeHtml = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({
 }[c]));
 const dayNames = ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Poniedziałek–piątek", "Sobota–niedziela", "Cały tydzień"];
 const sectionNames = {overview: "Podgląd", MU: "Użytkownik", MI: "Instalator", MS: "Serwis", MP: "Producent"};
+const deviceAnimations = new Set(["fan", "pump", "feed", "heat", "valve"]);
 const reasons = {
   controller_offline: "Sterownik jest odłączony", access_denied: "Brak dostępu lub nieaktywna gałąź",
   value_updating: "Oczekiwanie na potwierdzenie zmiany", parameters_missing: "Brak danych ustawienia",
@@ -66,7 +67,10 @@ class DefroEmodulCard extends HTMLElement {
   }
 
   _controller() { return this._controllers.find((c) => c.entry_id === this._selected); }
-  _icon(icon) { return `<ha-icon icon="${escapeHtml(/^mdi:[a-z0-9-]+$/.test(icon) ? icon : "mdi:tune")}"></ha-icon>`; }
+  _icon(icon, animation = "") {
+    const activity = deviceAnimations.has(animation) ? ` class="device-active device-${animation}"` : "";
+    return `<ha-icon icon="${escapeHtml(/^mdi:[a-z0-9-]+$/.test(icon) ? icon : "mdi:tune")}"${activity} aria-hidden="true"></ha-icon>`;
+  }
   _input(event) {
     if (event.target.dataset.search !== undefined) {
       this._query = event.target.value;
@@ -228,13 +232,14 @@ class DefroEmodulCard extends HTMLElement {
       ${item.warning ? `<p class="warning">${e(item.warning)}</p>` : ""}
       <fieldset ${unavailable && !item.can_unlock ? "disabled" : ""}>${this._editor(item)}${!["group", "password", "unsupported"].includes(item.kind) ? `<div class="buttons"><button type="button" data-action="save" class="primary">${item.kind === "action" ? "Wykonaj…" : "Zapisz"}</button><button type="button" data-action="cancel">Cofnij zmiany formularza</button></div>` : ""}</fieldset></article>`;
   }
-  _tile(tile) {
+  _tile(tile, online = true) {
     const e = escapeHtml;
     const entityId = tile.entity_id || "";
-    return `<button type="button" class="tile" data-action="more-info" data-entity-id="${e(entityId)}" ${entityId ? 'title="Historia i szczegóły w Home Assistant"' : 'disabled title="Brak encji w rejestrze Home Assistant"'}>${this._icon(tile.icon)}<span class="tile-name">${e(tile.name)}</span><strong>${tile.value == null ? "—" : e(typeof tile.value === "boolean" ? (tile.value ? "Włączone" : "Wyłączone") : tile.value)} <small>${e(tile.unit)}</small></strong></button>`;
+    const animation = online && !this._error && tile.value != null && tile.active === true && deviceAnimations.has(tile.animation) ? tile.animation : "";
+    return `<button type="button" class="tile" data-action="more-info" data-entity-id="${e(entityId)}" ${entityId ? 'title="Historia i szczegóły w Home Assistant"' : 'disabled title="Brak encji w rejestrze Home Assistant"'}><span class="tile-icon">${this._icon(tile.icon, animation)}${animation ? '<span class="tile-activity">Pracuje</span>' : ""}</span><span class="tile-name">${e(tile.name)}</span><strong>${tile.value == null ? "—" : e(typeof tile.value === "boolean" ? (tile.value ? "Włączone" : "Wyłączone") : tile.value)} <small>${e(tile.unit)}</small></strong></button>`;
   }
   _overview(controller) {
-    return `<div class="tiles">${(controller?.tiles || []).map((tile) => this._tile(tile)).join("")}</div><p class="hint">Kliknij kafelek, aby otworzyć historię i szczegóły encji w Home Assistant. Wybierz menu powyżej, aby zmieniać nastawy. Odczyty są aktualizowane przez integrację; menu standardowo co 5 minut. Przed zapisem uprawnienia i zakres są sprawdzane ponownie.</p>`;
+    return `<div class="tiles">${(controller?.tiles || []).map((tile) => this._tile(tile, controller.online === true)).join("")}</div><p class="hint">Ruch ikony i oznaczenie „Pracuje” wskazują aktywny odczyt pracy urządzenia. Kliknij kafelek, aby otworzyć historię i szczegóły encji w Home Assistant. Wybierz menu powyżej, aby zmieniać nastawy. Odczyty są aktualizowane przez integrację; menu standardowo co 5 minut. Przed zapisem uprawnienia i zakres są sprawdzane ponownie.</p>`;
   }
   _render() {
     const controller = this._controller();
@@ -261,6 +266,9 @@ class DefroEmodulCard extends HTMLElement {
     input[type=number],input[type=search],select{background:var(--card-background-color,#fff);color:inherit;border:1px solid var(--divider-color,#cbd3dd);border-radius:7px;padding:9px;min-width:0}input[type=checkbox]{width:20px;height:20px;accent-color:#e77e21;vertical-align:middle;flex-shrink:0}input[type=number]{width:110px}input[type=search]{width:min(100%,320px)}select{max-width:100%}input:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid #e77e21;outline-offset:2px}
     .filters{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:16px 0}.filters label{font-size:13px}.filters>span{font-size:12px;color:var(--secondary-text-color,#6d7580)}.status:empty{display:none}.status{padding:10px 12px;margin:10px 0;background:var(--secondary-background-color,#f1f5f8);border-radius:8px;font-size:13px}.status.error,.warning{color:var(--error-color,#b3261e)}
     .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:16px}.tile{padding:16px 12px;border:1px solid var(--divider-color,#e0e6eb);border-radius:12px;background:var(--card-background-color,#fff);color:inherit;text-align:left;min-width:0}.tile:disabled{opacity:1}.tile ha-icon{color:#e77e21;--mdc-icon-size:29px}.tile ha-icon[icon="mdi:water-boiler"],.tile ha-icon[icon="mdi:valve"]{color:#398dd4}.tile ha-icon[icon="mdi:pump"]{color:#43946b}.tile ha-icon[icon="mdi:fan"]{color:#7c8d9e}.tile-name{display:block;font-size:12px;color:var(--secondary-text-color,#637083);margin:9px 0}.tile strong{display:block;font-size:21px}.tile small{font-weight:400;font-size:13px}
+    .tile-icon{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:32px}.tile-activity{font-size:10px;font-weight:600;color:var(--primary-text-color,#263449);background:var(--secondary-background-color,#f5f7fa);border:1px solid var(--divider-color,#d5dce4);border-radius:12px;padding:3px 6px}.tile ha-icon.device-active{color:var(--state-active-color,#e77e21);filter:drop-shadow(0 0 4px currentColor);transform-origin:center;display:inline-block}.device-fan{animation:defro-spin 1.2s linear infinite}.device-pump{animation:defro-pump 1.1s ease-in-out infinite}.device-feed{animation:defro-feed .7s ease-in-out infinite}.device-heat{animation:defro-heat 1.8s ease-in-out infinite}.device-valve{animation:defro-valve 1.6s ease-in-out infinite}
+    @keyframes defro-spin{to{transform:rotate(360deg)}}@keyframes defro-pump{0%,100%{transform:scale(1)}50%{transform:scale(1.14)}}@keyframes defro-feed{0%,100%{transform:translateX(-2px)}50%{transform:translateX(2px)}}@keyframes defro-heat{0%,100%{opacity:.65}50%{opacity:1}}@keyframes defro-valve{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(12deg)}}
+    @media(prefers-reduced-motion:reduce){.tile ha-icon.device-active{animation:none}}
     .setting{border:1px solid var(--divider-color,#dce2e8);border-radius:12px;padding:16px;margin-bottom:10px}.setting.edited{border-color:#e77e21}.setting[hidden]{display:none}.setting-head{display:flex;align-items:flex-start;gap:10px}.setting-head ha-icon{color:#e77e21;flex-shrink:0}.setting-head strong{font-size:15px}.path{font-size:11px;color:var(--secondary-text-color,#6d7580);margin-top:4px;overflow-wrap:anywhere}.reason{font-size:12px;color:var(--secondary-text-color,#6d7580);margin-top:10px}.unavailable .setting-head ha-icon{color:var(--disabled-text-color,#8b95a0)}
     fieldset{border:0;padding:0;margin:12px 0 0;min-width:0}fieldset:disabled{opacity:.6}.value-line{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.value-line small{color:var(--secondary-text-color,#6d7580);font-size:12px}.buttons{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}.buttons button:last-child{font-size:12px}.toggle,.checks label{display:flex;gap:8px;align-items:center}.checks{display:flex;gap:14px;flex-wrap:wrap}.hint{font-size:12px;line-height:1.6;color:var(--secondary-text-color,#6d7580)}
     .curve{display:flex;gap:12px;flex-wrap:wrap}.curve label{display:flex;align-items:center;gap:6px;flex-direction:column;font-size:12px}.slots{display:grid;grid-template-columns:repeat(auto-fit,minmax(74px,1fr));gap:8px;margin-top:12px}.slots label{font-size:11px;text-align:center;display:flex;align-items:center;flex-direction:column;gap:5px}.slots input[type=number]{width:100%;max-width:100px;padding:8px 4px}.slots.onoff label{border:1px solid var(--divider-color,#dce2e8);border-radius:6px;padding:8px}.slots.onoff label:has(input:checked){background:#e77e211a;border-color:#e77e21}.fill{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.fill button{font-size:12px}code{overflow-wrap:anywhere}p{line-height:1.5;font-size:13px}

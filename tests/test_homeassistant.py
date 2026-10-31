@@ -150,6 +150,11 @@ async def test_panel_tiles_resolve_registered_entities_and_follow_user_renames(h
     response=await hass.services.async_call(DOMAIN,'get_controls',{},blocking=True,return_response=True)
     tiles=response['controllers'][0]['tiles']
     assert next(t for t in tiles if t['key']=='tile_1006_value')['entity_id']==renamed.entity_id
+    pump_tile=next(t for t in tiles if t['key']=='tile_1004_workingstatus')
+    assert pump_tile['animation']=='pump' and pump_tile['active'] is True
+    assert next(t for t in tiles if t['key']=='tile_1011_gear')['animation']=='fan'
+    assert next(t for t in tiles if t['key']=='tile_1012_valvepump')['icon']=='mdi:pump'
+    assert next(t for t in tiles if t['key']=='tile_1006_value')['animation']==''
     for tile in tiles:
         registered=registry.async_get(tile['entity_id'])
         assert registered.config_entry_id==item.entry_id
@@ -161,6 +166,7 @@ async def test_panel_tiles_resolve_registered_entities_and_follow_user_renames(h
     item.runtime_data.last_update_success=False
     offline=await hass.services.async_call(DOMAIN,'get_controls',{},blocking=True,return_response=True)
     assert next(t for t in offline['controllers'][0]['tiles'] if t['key']=='tile_1006_value')['entity_id']==renamed.entity_id
+    assert all(t['active'] is False for t in offline['controllers'][0]['tiles'])
     write.assert_not_awaited()
 
 

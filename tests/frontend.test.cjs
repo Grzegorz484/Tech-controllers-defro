@@ -137,6 +137,65 @@ test('unavailable readings keep history links, missing registry entities are dis
   assert.equal(events.length, 0);
 });
 
+test('only confirmed working devices receive the corresponding animation and label', () => {
+  const {card} = setup();
+  for (const animation of ['fan', 'pump', 'feed', 'heat', 'valve']) {
+    const tile = {entity_id:'binary_sensor.device',name:'Urządzenie',icon:'mdi:pump',
+      value:true,active:true,animation};
+    const html = card._tile(tile);
+    assert.match(html, new RegExp(`class="device-active device-${animation}"`));
+    assert.match(html, /tile-activity">Pracuje/);
+    assert.match(html, /data-entity-id="binary_sensor.device"/);
+    for (const active of [false, null, undefined, 'true', 1]) {
+      assert.doesNotMatch(card._tile({...tile,active}), /device-active|tile-activity/);
+    }
+    assert.doesNotMatch(card._tile({...tile,value:null}), /device-active|tile-activity/);
+    assert.doesNotMatch(card._tile({...tile,value:undefined}), /device-active|tile-activity/);
+  }
+});
+
+test('fan speed needs explicit activity and does not imply operation by itself', () => {
+  const {card} = setup();
+  const tile = {entity_id:'sensor.fan_speed',name:'Wentylator — bieg',icon:'mdi:fan',
+    value:35,unit:'%',animation:'fan'};
+  assert.doesNotMatch(card._tile(tile), /device-active|tile-activity/);
+  assert.match(card._tile({...tile,active:true}), /device-fan/);
+});
+
+test('offline controllers and failed reads stop animation while keeping history available', async () => {
+  const {card} = setup();
+  const calls = configure(card, {key:'mu_1'});
+  const tile = {entity_id:'binary_sensor.pump',name:'Pompa CO',icon:'mdi:pump',
+    value:true,animation:'pump',active:true};
+  card._controllers[0].tiles = [tile];
+  assert.match(card._overview(card._controller()), /device-active/);
+  assert.doesNotMatch(card._overview({...card._controller(),online:false}), /device-active|tile-activity/);
+  card._hass.callWS = async () => { throw new Error('Brak połączenia'); };
+  await card._load(true);
+  assert.match(card._error, /Brak połączenia/);
+  assert.doesNotMatch(card._tile(tile), /device-active|tile-activity/);
+  assert.match(card._tile(tile), /data-entity-id="binary_sensor.pump"/);
+  card._hass.callWS = async () => ({response:{controllers:card._controllers}});
+  await card._load(true);
+  assert.match(card._tile(tile), /device-active/);
+  assert.equal(calls.length, 0);
+});
+
+test('animation metadata cannot inject attributes and menu icons remain static', () => {
+  const {card} = setup();
+  const hostile = 'fan" onmouseover="alert(1)';
+  assert.doesNotMatch(card._icon('mdi:fan',hostile), /device-active|onmouseover/);
+  assert.doesNotMatch(card._tile({value:true,active:true,animation:hostile}), /device-active|onmouseover/);
+  assert.doesNotMatch(card._row({key:'mu_1',name:'Pompa',label:'Pompa',icon:'mdi:pump',
+    kind:'switch',available:true,value:true,active:true,animation:'pump'}), /device-active/);
+});
+
+test('reduced motion disables animation and retains a visible working indicator', () => {
+  const {card,Card} = setup();
+  assert.match(Card.styles, /@media\(prefers-reduced-motion:reduce\)\{\.tile ha-icon\.device-active\{animation:none\}\}/);
+  assert.match(card._tile({icon:'mdi:pump',value:true,active:true,animation:'pump'}), /tile-activity">Pracuje/);
+});
+
 test('polling preserves unfinished form contents', async () => {
   const {card} = setup();
   configure(card, {key:'mu_1'});

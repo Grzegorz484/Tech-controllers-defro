@@ -8,7 +8,7 @@ from custom_components.defro_emodul.frontend import CARD_PATH,async_setup_ui
 from custom_components.defro_emodul.const import VERSION
 
 
-@pytest.mark.parametrize('old_url',[None,CARD_PATH+'?v=1.0.0',CARD_PATH+'?v=1.1.0'])
+@pytest.mark.parametrize('old_url',[None,CARD_PATH+'?v=1.0.0',CARD_PATH+'?v=1.1.0',CARD_PATH+'?v=1.1.1'])
 async def test_card_resource_is_registered_once_and_versioned(hass,monkeypatch,old_url):
     static=AsyncMock()
     monkeypatch.setattr(hass,'http',SimpleNamespace(async_register_static_paths=static),raising=False)

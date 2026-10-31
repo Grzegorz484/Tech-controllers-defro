@@ -1,7 +1,7 @@
 # tech-controllers-defro
 
 Integracja **DEFRO APC Slim / ST-9730** z Home Assistant przez eModuł.
-Wersja **1.1.1** otwiera z kafelków standardowe okno Home Assistant z historią encji.
+Wersja **1.1.2** animuje ikonki pracujących urządzeń w zakładce **Podgląd** karty DEFRO.
 Integracja zawiera sterowanie i panel menu z ikonami funkcji kotła.
 Zachowuje identyfikatory **317 encji odczytu**: 261 `sensor` i 56 `binary_sensor`.
 
@@ -32,15 +32,16 @@ odczytem: ustawienie oczekuje na aktualizację; brak potwierdzenia powoduje ostr
 Czynności takie jak rozpalanie, wygaszanie lub przywrócenie ustawień są dostępne
 w panelu, jeśli udostępnia je sterownik, i wymagają dodatkowego potwierdzenia.
 
-## Aktualizacja z 1.0.0 lub 1.1.0
+## Aktualizacja z 1.0.0, 1.1.0 lub 1.1.1
 
 1. W HACS otwórz **Tech-controllers-defro → menu ⋮ → Pobierz ponownie**
    (lub Aktualizuj, jeśli HACS wyświetla aktualizację).
 2. Uruchom ponownie Home Assistant. Zachowaj dotychczasowy wpis integracji.
-3. Odśwież stronę HA. Encje sterowania znajdziesz przy urządzeniu DEFRO
+3. Odśwież stronę HA (w razie potrzeby użyj Ctrl+F5). Encje sterowania znajdziesz przy urządzeniu DEFRO
    w części konfiguracji; mogą mieć osobne nazwy obok sensorów odczytu.
 4. Dodaj kartę menu do pulpitu zgodnie z następną sekcją.
-   Jeżeli karta jest już dodana, kliknij kafelek temperatury, aby otworzyć historię HA.
+   Jeżeli karta jest już dodana, animacje pojawią się automatycznie przy pracujących urządzeniach.
+   W trybie zasobów YAML zmień wersję adresu karty na `?v=1.1.2` zgodnie z przykładem poniżej.
 
 ## Panel menu z ikonami
 
@@ -61,7 +62,7 @@ Jeżeli HA pokazuje „Custom element doesn't exist”, odśwież stronę i spra
 **Ustawienia → Pulpity → menu ⋮ → Zasoby**. Dodaj zasób typu **Moduł JavaScript**:
 
 ```text
-/defro_emodul_static/defro-emodul-card.js?v=1.1.1
+/defro_emodul_static/defro-emodul-card.js?v=1.1.2
 ```
 
 W trybie zasobów YAML wpisz go ręcznie w konfiguracji Lovelace:
@@ -69,9 +70,23 @@ W trybie zasobów YAML wpisz go ręcznie w konfiguracji Lovelace:
 ```yaml
 lovelace:
   resources:
-    - url: /defro_emodul_static/defro-emodul-card.js?v=1.1.1
+    - url: /defro_emodul_static/defro-emodul-card.js?v=1.1.2
       type: module
 ```
+
+### Animowane ikonki pracy
+
+W zakładce **Podgląd** karty `custom:defro-emodul-card` obraca się ikonka
+pracującego wentylatora, pulsują pompy, porusza się podajnik i zawór, a grzałka
+rozświetla się podczas pracy. Animacje korzystają z aktualnej flagi pracy
+danego urządzenia zwróconej przez sterownik. Wartość biegu wentylatora ani
+procent otwarcia zaworu same w sobie nie uruchamiają animacji.
+
+Ruch zatrzymuje się po wyłączeniu urządzenia, przy braku prawidłowego odczytu,
+odłączeniu sterownika lub błędzie pobierania danych panelu. Ikony temperatur
+i czujnika płomienia pozostają statyczne. Gdy system lub przeglądarka ma włączone
+ograniczenie animacji, stan pracy nadal wyróżnia podświetlenie ikonki.
+Animacje dotyczą wbudowanej karty DEFRO. Kliknięcie kafelka nadal otwiera historię HA.
 
 ### Historia po kliknięciu kafelka
 

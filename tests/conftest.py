@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+import shutil
 import sys
 
 import pytest
@@ -17,7 +18,7 @@ from homeassistant.helpers import entity_registry,device_registry,area_registry,
 
 @pytest.fixture
 def catalogue():
-    return json.loads((PROJECT / 'custom_components/defro_emodul/catalogue.json').read_text())
+    return json.loads((PROJECT / 'custom_components/defro_emodul/catalogue.json').read_text(encoding='utf-8'))
 
 
 @pytest.fixture
@@ -31,7 +32,12 @@ def snapshot():
 @pytest_asyncio.fixture
 async def hass(tmp_path,monkeypatch):
     config = tmp_path / 'ha';config.mkdir()
-    (config / 'custom_components').symlink_to(PROJECT / 'custom_components',target_is_directory=True)
+    try:
+        (config / 'custom_components').symlink_to(PROJECT / 'custom_components',target_is_directory=True)
+    except OSError as exc:
+        if sys.platform != 'win32' or exc.winerror != 1314:
+            raise
+        shutil.copytree(PROJECT / 'custom_components', config / 'custom_components')
     instance = HomeAssistant(str(config))
     loader.async_setup(instance)
     device_registry.async_setup(instance)

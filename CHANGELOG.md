@@ -1,5 +1,13 @@
 # Zmiany
 
+## 1.1.2 — 2026-10-31
+
+- Animowane ikonki wentylatora, pomp, podajnika, grzałki i zaworu w zakładce Podgląd karty DEFRO.
+- Animacje i podświetlenie pracy powiązane z aktualną flagą pracy urządzenia, także na kafelkach biegu wentylatora i otwarcia zaworu.
+- Zatrzymanie animacji po wyłączeniu, przy niedostępnym odczycie, odłączeniu sterownika i błędzie pobierania danych panelu.
+- Obsługa systemowego ograniczenia animacji z zachowaniem podświetlenia pracy.
+- Odświeżenie wersji zasobu karty; zachowane identyfikatory encji i dostęp do historii HA.
+
 ## 1.1.1 — 2026-10-25
 
 - Kliknięcie kafelka otwiera standardowe okno Home Assistant z historią i szczegółami encji.
